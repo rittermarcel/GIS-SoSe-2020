@@ -4,62 +4,44 @@
     <meta charset="utf-8" />
     
 <title>Kontakt</title>
-
-<style>
-  
-  
-.mailpositionierung {
-    position: absolute;   
-         
-       left: 30px; top: 295px; 
-}
-
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-<h2>Kontakt</h2>
-<nav>
-    <a href="https://rittermarcel.github.io/GIS-SoSe-2020/Abgaben/Aufgabe2/portfolio.html">Zum Portfolio</a>
-    <a href="https://rittermarcel.github.io/GIS-SoSe-2020/Abgaben/Aufgabe2/about_me.html">Über mich</a>
-</nav>
+<div class="navbar">
+    <nav>
+        <a href="portfolio.html">Home |</a>
+        <a href="about_me.html">Über mich |</a>
+        <a  class="aktiv" href="contact.html">Kontakt</a>
+    </nav>
+    </div>
+    <div class="uberschrift">
+        <h1>Portfolio</h1>
+    <h2>Marcel Ritter</h2>
+    </div>
+
+    <div class="instagramlogo">
+        <a href="https://www.instagram.com/ein_marcel/?hl=de"><img src="instagram.png" height="30px" width="30px"></a>
+        </div>
 </header>
 <main>
+<h1>Kontaktformular</h1>
+<form id="formular">
+<input placeholder="Vorname" type="text" class="formularEingabe" name="vorname"> 
 <br><br>
+<input placeholder="Nachname" type="text" class="formularEingabe" name="nachname">
+<br><br>
+<input placeholder="Email" type="email" class="formularEingabe" name="Email">
+<br><br>
+<textarea placeholder="Nachricht" id="nachricht" name="nachricht" cols="20" rows="5"></textarea>
+<p>Mit Absenden der Nachricht muss du nichts bestätigen</p>
+<button class="Absenden">Absenden</button>
 
-<br><br>
 
-<a href="https://github.com/rittermarcel"><img src="https://rittermarcel.github.io/GIS-SoSe-2020/Abgaben/Aufgabe2/githublogo.png" width="100" height="50" alt="githublogo"></a>
+</form>
 
-<br><br>
-<a href="https://www.instagram.com/ein_marcel/?hl=de"><img src="https://rittermarcel.github.io/GIS-SoSe-2020/Abgaben/Aufgabe2/instagram.jpg" width="100" height="50" alt="instagramlogo"> </a>
 
-<br><br>
-
-<div class="mailpositionierung">
-      <!--  Ja ich weiß eigentlich kein CSS. Aaaaaber für die Optik des Icons musste es sein :)  -->
-<a href= "mailto:marcel.joan.leberecht.buisan@hs-furtwangen.de"><img src="https://rittermarcel.github.io/GIS-SoSe-2020/Abgaben/Aufgabe2/mail.png" width="50" height="50" alt="maillogo"></a>
-</div>
-
-<br><br>
-<br><br>
-<br><br>
-<br>
-<p>Noch ein paar <strong>Grüße </strong> gehen raus an:</p>
-<ul>
-<li><p><a href="https://loge99.github.io/gis_lorenzo/Aufgabe01/Aufgabe_1.html">Lorenzooo</a></p></li>
-<li><p><a href="https://christianhauser.github.io/gis_SoSe2020/Aufgabe01/index.html">Christian</a></p></li>
-<li><p><a href="https://lenhu404.github.io/gis_SoSe_2020/Steckbrief/Aufgaben/Aufgabe01/Aufgabe_01.html">Lennard</a></p></li>
-</ul>
-<br><br>
-<br><br>
-
-<p>Hier ein bisschen Musik zum Konzentrieren</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4GnVDPD01as" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br><br>
-<small>Aber nicht einschlafen :D</small>
 </main>
 
 <footer></footer>
