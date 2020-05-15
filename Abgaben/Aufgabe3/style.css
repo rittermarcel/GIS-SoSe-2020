@@ -123,5 +123,21 @@ b{
     margin-top: 170px;
 }
 #formular p{
-    font-size: 8px;
+    font-size: 9px;
+}
+
+.formularEingabe{
+ width: 200px;
+ height:30px;   
+}
+
+#nachricht{
+    margin-left: -0px;
+}
+.Absenden{
+    width:80px;
+    height:30px;
+}
+#formular{
+  margin-top: 50px;
 }
