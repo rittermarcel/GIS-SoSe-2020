@@ -132,22 +132,32 @@ b{
 .formularEingabe{
 background-color: lightgray;
  width: 200px;
- height:30px;   
+ height:20px;   
+ border: none;
 }
 ::placeholder{
     color:white;
 }
 
 #nachricht{
-    margin-left: -0px;
+    margin-left: 105px;
     background-color: lightgray;
+    border:none;
+    font-family: sans-serif;
 }
 .Absenden{
     color:white;
     background-color: lightgray;
     width:80px;
-    height:30px;
+    height:25px;
+    border:none;
 }
 #formular{
+    margin-left: -50px;
   margin-top: 50px;
+  line-height:8px;
+}
+#formular p{
+    color:gray;
+    margin-left: 40px;
 }
