@@ -57,9 +57,9 @@ nav{
 }
 
 .instagramlogo img{
-    position: absolute;
-    top: 120px;
-    margin-left: -7px;
+position: absolute;
+top:125px;
+margin-left: -15px;
     
 
 }
@@ -68,8 +68,11 @@ nav{
 }
 
 .instagramlogo img:hover{
-    height: 50px;
-    width:50px;
+    height: 45px;
+    width:45px;
+    position: absolute;
+    top:120px;
+    margin-left: -20px;
 }
 h1{
     color:darkolivegreen;
