@@ -151,6 +151,7 @@ background-color: lightgray;
     width:80px;
     height:25px;
     border:none;
+    margin-left: -120px;
 }
 #formular{
     margin-left: -50px;
