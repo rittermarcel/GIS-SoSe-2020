@@ -127,14 +127,21 @@ b{
 }
 
 .formularEingabe{
+background-color: lightgray;
  width: 200px;
  height:30px;   
+}
+::placeholder{
+    color:white;
 }
 
 #nachricht{
     margin-left: -0px;
+    background-color: lightgray;
 }
 .Absenden{
+    color:white;
+    background-color: lightgray;
     width:80px;
     height:30px;
 }
