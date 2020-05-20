@@ -1,590 +1,196 @@
 
-html{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+div>img{
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    
 }
 
+body {
+    font-family: sans-serif;
 
-.freeshipping{
-    width:100%;
-    height:30px;
-    background-color: lightskyblue;
+}
+header{
+    position: absolute;
+    background-color: skyblue;
+    height: 90px;
     top:0px;
-    position:absolute;
     left:0px;
-}
-
-
-
-.freeshipping p {
-    text-align: center;
-    margin-top: 7px;
-    font-size: 13px;
-}
-
-.leiste{
     width:100%;
-    height:70px;
-    background-color: white;
-    top:30px;
-    position:absolute;
-    left:0px;
+}
+img[alt="einkaufswagen"]{
+    height: 30px;
+    top: 30px;
+    right: 40px;    
+    position: absolute;
+}
+img[src="ball.png"]{
+    height: 70px;
+    width: 70px;
+    left:40px;
+    position: absolute;
+    top: 10px;
+}
+img[alt="wallpaper"]{
+    height: 100%;
+    width: 100%;
+    top: 90px;
+    right: 0px;    
+    position: absolute;
 }
 
-.leiste h1{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 35px;
+#kleidungüberschrift{
+ text-align: center;
+ font-size: 32px;
+ margin-top: 30px;
+
+}
+
+h2+p{
+    font-size: 10px;
+    margin-left: 50px;
+}
+img~h2{
+    font-size: 17px;
     margin-top: 10px;
-    color:black;
+    margin-left: 50px;
 }
-.leiste h2{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: -25px;
-    color:black;
+
+.Preis{
+    font-style: italic;
     font-size: 12px;
-   text-align: center;
+    width: 50px;
+    margin-left: 50px;
 }
 
 
-.leiste .einkaufswagen{
-    position: absolute;
-    top:25px;
-    right:100px;
+
+main {
+    margin-top: 670px;
+    margin-left: 10px;
+    display: flex;   
+    flex-direction: column;
+
+}
+main>div {
+        
+    display: flex;
+    flex-wrap: wrap;
+}
+main div div{
+    width: 200px;
+    margin: 20px;
+
 }
 
-.leiste .ball{
-    position:absolute;
-    right:870px;
-    top:2px;
+
+h1{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 15px;
+    
 }
 
-
-nav .Hauptmenü{
-    position: absolute;
-    top:8px;
-    left:100px;
-    font-size: 18px;
-    color:black;
-}
-
-nav button[alt="kleidung"] {
-  position: absolute;
-  top:25px;
-  left:100px;
-  border: none;
-  background-color: white;
-  font-size: 20px;
-}
-
-.leiste a :hover{
-  color:black;
-  background-color: lightskyblue;
-}
-
-nav button[alt="equipment"] {
-  position: absolute;
-  top:25px;
-  left:200px;
-  border: none;
-  background-color: white;
-  font-size: 20px;
-}
-
-#tenniswallpaper{
-    position: absolute;
-    left:0px;
-    top:100px;
-}
-
-.Tshirts h3{
-  position: relative;
-margin-top: 1270px;
-text-align: center;
-font-size: 30px;
-}
-
-.Tshirts img[alt="T-Shirt1"] {
+#kleidung{
 position: absolute;
-left:50px;
-top:1390px;
+left:150px;
+top:30px;
+padding: 10px;
+text-decoration: none;
+color:white;
 }
-
-.tshirtrottext{
-  position: absolute;
-  left:150px;
-  top:1670px;
-}
-
-
-.kaufenrot{
-  position: absolute;
-  left:120px;
-  top:1800px;
-  padding:7px 40px;
-  
-}
-
-.Tshirts img[alt="T-Shirt2"] {
-position: absolute;
-left:370px;
-top:1390px;
-}
-
-.tshirtschwarztext{
-  position: absolute;
-  left:470px;
-  top:1670px;
-}
-
-
-.kaufenschwarz{
-  position: absolute;
-  left:440px;
-  top:1800px;
-  padding:7px 40px;
-  
-}
-
-
-.Hosen img {
-  position: absolute;
-  top:1390px;
-  left:690px;
-  }
- 
-.hosetext{
-  position: absolute;
-  left:790px;
-  top:1670px;
-}
-
-  .hosekaufen{
+#equipment{
     position: absolute;
-    left:770px;
-    top:1800px;
-    padding:7px 40px;
-  }
-  .Socken img {
-    position: absolute;
-    left:1010px;
-    top:1420px;
-    }
-    .socketext{
-      position: absolute;
-  left:1110px;
-  top:1670px;
-    }
-    .sockenkaufen{
-      position: absolute;
-    left:1090px;
-    top:1800px;
-    padding:7px 40px;
-   
-    }
+    left:230px;
+    top:30px;
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+}
+#equipmentüberschrift{
+    margin-top: 100px;
+    font-size: 32px;
+    text-align: center;
+}
 
-    .kappe img {
-      position: absolute;
-      top:1390px;
-      left:1330px;
-      }
-      .kappetext{
-        position: absolute;
-  left:1430px;
-  top:1670px;
-      }
-      .kappekaufen{
-        position: absolute;
-        left:1410px;
-        top:1800px;
-        padding:7px 40px;
-      }
-      .brille img {
-        position: absolute;
-        top:1390px;
-        left:1650px;
-        }
-        .brilletext{
-          position: absolute;
-    left:1750px;
-    top:1670px;
-        }
-        .brillekaufen{
-          position: absolute;
-          left:1730px;
-          top:1800px;
-          padding:7px 40px;
-        }
 
-   
-      #leiste2{
-        position: absolute;
-        height:7px;
-        width:100%;
-        top:1900px;
-        left:0px;
-        background-color: black;
-      }
-      #equipmentlink{
-        font-size: 30px;
-        text-align: center;
-        margin-top: 660px;
-      }
 
-      .tasche img{
-        position: absolute;
-        left:50px;
-        top:2080px;
-      }
-      .taschetext{
-        position: absolute;
-  left:150px;
-  top:2360px;
-      }
-      .taschekaufen{
-        position: absolute;
-        left:130px;
-        top:2490px;
-        padding:7px 40px;
-      }
 
-      .schläger img{
-        position: absolute;
-        left:370px;
-        top:2080px;
-      }
-      .schlägertext{
-        position: absolute;
-  left:470px;
-  top:2360px;
-      }
-      .schlägerkaufen{
-        position: absolute;
-        left:450px;
-        top:2490px;
-        padding:7px 40px;
-      }
-      .ball img{
-        position: absolute;
-        left:690px;
-        top:2080px;
-      }
-      .balltext{
-        position: absolute;
-  left:790px;
-  top:2360px;
-      }
-      .ballkaufen{
-        position: absolute;
-  left:770px;
-  top:2490px;
-  padding:7px 40px;
-      }
 
-      .bandage img{
-        position: absolute;
-        left:1010px;
-        top:2080px;
-      }
-      .bandagetext{
-        position: absolute;
-  left:1110px;
-  top:2360px;
-      }
 
-      .bandagekaufen{
-        position: absolute;
-  left:1090px;
-  top:2490px;
-  padding:7px 40px;
-      }
 
-      .dämpfer img{
-        position: absolute;
-        left:1390px;
-        top:2120px;
-      }
-      .dämpfertext{
-        position: absolute;
-  left:1430px;
-  top:2360px;
-      }
-      .dämpferkaufen{
-        position: absolute;
-  left:1410px;
-  top:2490px;
-  padding:7px 40px;
-      }
-      .schuh img{
-        position: absolute;
-        left:1650px;
-        top:2120px;
-      }
-      .schuhtext{
-        position: absolute;
-  left:1750px;
-  top:2360px;
-      }
-      .schuhkaufen{
-        position: absolute;
-  left:1730px;
-  top:2490px;
-  padding:7px 40px;
-      }
 
-      @media (min-width: 1px) {
-      .leiste h1{
-         color:blue;
-       }
-        
-      }
-      
-      @media (min-width: 600px) {
-        .Tshirts h3{
-          position: relative;
-        margin-top: 1100px;
-        text-align: center;
-        font-size: 30px;
-        }
-        
-        .Tshirts img[alt="T-Shirt1"] {
-        position: absolute;
-        left:50px;
-        top:1300px;
-        }
-        
-        .tshirtrottext{
-          position: absolute;
-          left:150px;
-          top:1580px;
-        }
-        
-        
-        .kaufenrot{
-          position: absolute;
-          left:120px;
-          top:1710px;
-          padding:7px 40px;
-          
-        }
-        
-        .Tshirts img[alt="T-Shirt2"] {
-        position: absolute;
-        left:370px;
-        top:1300px;
-        }
-        
-        .tshirtschwarztext{
-          position: absolute;
-          left:470px;
-          top:1580px;
-        }
-        
-        
-        .kaufenschwarz{
-          position: absolute;
-          left:440px;
-          top:1710px;
-          padding:7px 40px;
-          
-        }
-        
-        
-        .Hosen img {
-          position: absolute;
-          top:1300px;
-          left:690px;
-          }
-         
-        .hosetext{
-          position: absolute;
-          left:790px;
-          top:1580px;
-        }
-        
-          .hosekaufen{
-            position: absolute;
-            left:770px;
-            top:1710px;
-            padding:7px 40px;
-          }
-          .Socken img {
-            position: absolute;
-            left:50px;
-            top:2000px;
-            }
-            .socketext{
-              position: absolute;
-          left:150px;
-          top:2280px;
-            }
-            .sockenkaufen{
-              position: absolute;
-            left:120px;
-            top:2410px;
-            padding:7px 40px;
-           
-            }
-        
-            .kappe img {
-              position: absolute;
-              top:2000px;
-              left:370px;
-              }
-              .kappetext{
-                position: absolute;
-          left:470px;
-          top:2280px;
-              }
-              .kappekaufen{
-                position: absolute;
-                left:1410px;
-                top:2410px;
-                padding:7px 40px;
-              }
-              .brille img {
-                position: absolute;
-                top:2000px;
-                left:790px;
-                }
-                .brilletext{
-                  position: absolute;
-            left:890px;
-            top:2280px;
-                }
-                .brillekaufen{
-                  position: absolute;
-                  left:1730px;
-                  top:2410px;
-                  padding:7px 40px;
-                }
-        
-           
-              #leiste2{
-                position: absolute;
-                height:7px;
-                width:100%;
-                top:3000px;
-                left:0px;
-                background-color: black;
-              }
-              #equipmentlink{
-                font-size: 30px;
-                text-align: center;
-                margin-top: 660px;
-              }
-        
-              .tasche img{
-                position: absolute;
-                left:50px;
-                top:2700px;
-              }
-              .taschetext{
-                position: absolute;
-          left:150px;
-          top:2360px;
-              }
-              .taschekaufen{
-                position: absolute;
-                left:130px;
-                top:2490px;
-                padding:7px 40px;
-              }
-        
-              .schläger img{
-                position: absolute;
-                left:370px;
-                top:2700px;
-              }
-              .schlägertext{
-                position: absolute;
-          left:470px;
-          top:2360px;
-              }
-              .schlägerkaufen{
-                position: absolute;
-                left:450px;
-                top:2490px;
-                padding:7px 40px;
-              }
-              .ball img{
-                position: absolute;
-                left:690px;
-                top:2700px;
-              }
-              .balltext{
-                position: absolute;
-          left:790px;
-          top:2360px;
-              }
-              .ballkaufen{
-                position: absolute;
-          left:770px;
-          top:2490px;
-          padding:7px 40px;
-              }
-        
-              .bandage img{
-                position: absolute;
-                left:50px;
-                top:3400px;
-              }
-              .bandagetext{
-                position: absolute;
-          left:150px;
-          top:3000px;
-              }
-        
-              .bandagekaufen{
-                position: absolute;
-          left:1090px;
-          top:2490px;
-          padding:7px 40px;
-              }
-        
-              .dämpfer img{
-                position: absolute;
-                left:370px;
-                top:3400px;
-              }
-              .dämpfertext{
-                position: absolute;
-          left:470px;
-          top:2360px;
-              }
-              .dämpferkaufen{
-                position: absolute;
-          left:1410px;
-          top:2490px;
-          padding:7px 40px;
-              }
-              .schuh img{
-                position: absolute;
-                left:690px;
-                top:3400px;
-              }
-              .schuhtext{
-                position: absolute;
-          left:790px;
-          top:2360px;
-              }
-              .schuhkaufen{
-                position: absolute;
-          left:1730px;
-          top:2490px;
-          padding:7px 40px;
-              }
-            }
-        
-      
-      
-      @media (min-width: 1024px) {
-       .leiste h1{
-          color:black;
-        }
-        
-       
-      }
+
+@media (max-width:  1024px){ 
 
     
 
+    main>div {
+        margin-left: 50px;
+        margin-right: 50px;
+        
+    }
+
+    h2{
+        text-align: center;
+    }
+   
+   }
+   #kleidung{
+    position: absolute;
+    left:40%;
+    top:55px;
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+    }
+    #equipment{
+        position: absolute;
+        left:53%;
+        top:55px;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+    }
+   
+
+
+@media (max-width:  600px){ 
+
+ main div div{
+    margin: 0px;
+    margin-bottom: 20px;
+}
+main  div{
+    margin: 0px;
+   
+}
+h2{
+    text-align: center;
+}
+h1{
+    font-size: 28px;
+}
+#kleidung{
+    position: absolute;
+    left:30%;
+    top:50px;
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+    }
+    #equipment{
+        position: absolute;
+        left:60%;
+        top:50px;
+        padding: 10px;
+        text-decoration: none;
+        color:white;
+    }
+
+img[src="ball.png"]{
+    height: 40px;
+    width: 40px;
+}
+
+}
