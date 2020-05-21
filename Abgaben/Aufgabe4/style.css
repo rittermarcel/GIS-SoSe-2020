@@ -5,6 +5,50 @@ div>img{
     margin-top: 30px;
     
 }
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-top: -68px;
+    margin-left: 15%;
+  }
+  .dropdown .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+    
+  }
+  .dropdown:hover .dropbtn {
+    background-color: skyblue;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 
 body {
     font-family: sans-serif;
@@ -25,11 +69,11 @@ img[alt="einkaufswagen"]{
     position: absolute;
 }
 img[src="ball.png"]{
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     left:40px;
     position: absolute;
-    top: 10px;
+    top: 20px;
 }
 img[alt="wallpaper"]{
     height: 100%;
@@ -62,7 +106,9 @@ img~h2{
     width: 50px;
     margin-left: 50px;
 }
-
+.kaufen{
+    margin-left: 50px;
+}
 
 
 main {
@@ -85,46 +131,30 @@ main div div{
 
 
 h1{
-    font-size: 45px;
+    font-size: 43px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 18px;
     
 }
-
-#kleidung{
-position: absolute;
-left:150px;
-top:30px;
-padding: 10px;
-text-decoration: none;
-color:white;
-}
-#equipment{
-    position: absolute;
-    left:230px;
-    top:30px;
-    padding: 10px;
-    text-decoration: none;
-    color:white;
-}
 #equipmentüberschrift{
-    margin-top: 100px;
+    margin-top: 90px;
     font-size: 32px;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-@media (max-width:  1024px){ 
-
-    
-
+@media (max-width:  1024px){ /*Tablet*/
+    img~h2{
+        margin-left: 0px;
+    }
+    .dropdown .dropbtn {
+        font-size: 18px;
+    }
+    img[src="ball.png"]{
+        height: 40px;
+        width: 40px;
+    }
+    h1{
+        font-size: 36px;
+    }
     main>div {
         margin-left: 50px;
         margin-right: 50px;
@@ -136,44 +166,20 @@ color:white;
     }
    
    }
-   #kleidung{
-    position: absolute;
-    left:150px;
-    top:40px;
-    font-size: 10px;
-    text-decoration: none;
-    color:black;
-  
-    padding:10px;
-    }
 
-    #kleidung :hover{
-background-color: skyblue;
-color:black;
-    }
-    #equipment{
-        position: absolute;
-        left:230px;
-        top:40px;
-        font-size: 10px;
-        text-decoration: none;
-        color:black;
-        padding:10px;
-    }
-    #equipment :hover{
-        background-color: skyblue;
-        color:black;
-            }
+@media (max-width:  600px){ /*smartphone*/
+    .dropdown {
+        margin-top: -20px;
+        margin-left: 40%;
+      }
 
-
-@media (max-width:  600px){ 
 
  main div div{
     margin: 0px;
     margin-bottom: 20px;
 }
 main  div{
-    margin: 0px;
+    margin-right: 30px;
    
 }
 h2{
@@ -182,23 +188,6 @@ h2{
 h1{
     font-size: 28px;
 }
-#kleidung{
-    position: absolute;
-    left:30%;
-    top:50px;
-    padding: 10px;
-    text-decoration: none;
-    color:black;
-    }
-    #equipment{
-        position: absolute;
-        left:60%;
-        top:50px;
-        padding: 10px;
-        text-decoration: none;
-        color:black;
-    }
-
 img[src="ball.png"]{
     height: 40px;
     width: 40px;
