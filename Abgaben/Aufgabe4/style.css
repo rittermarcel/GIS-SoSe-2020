@@ -1,9 +1,7 @@
-
 div>img{
     height: 200px;
     width: 200px;
     margin-top: 30px;
-    
 }
 .dropdown {
     float: left;
@@ -156,8 +154,8 @@ h1{
         font-size: 36px;
     }
     main>div {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
         
     }
 
@@ -166,8 +164,22 @@ h1{
     }
    
    }
+   img[alt="wallpaper"]{
+    height: 90%; 
+}
+main {
+    margin-top: 600px;
+}
 
 @media (max-width:  600px){ /*smartphone*/
+    img[alt="wallpaper"]{
+        height: 70%; 
+    }
+    main {
+        margin-top: 500px;
+    }
+
+
     .dropdown {
         margin-top: -20px;
         margin-left: 40%;
