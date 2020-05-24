@@ -84,8 +84,7 @@ img[alt="wallpaper"]{
 #kleidungüberschrift{
  text-align: center;
  font-size: 32px;
- margin-top: 500px;
-
+ margin-top: 580px;
 }
 
 h2+p{
@@ -110,7 +109,7 @@ img~h2{
 
 
 main {
-    margin-top: 70px;
+    margin-top: 600px;
     margin-left: 10px;
     display: flex;   
     flex-direction: column;
@@ -162,21 +161,23 @@ h1{
     h2{
         text-align: center;
     }
-   
-   }
-   img[alt="wallpaper"]{
-    height: 90%; 
-}
-main {
-    margin-top: 600px;
-}
-
-@media (max-width:  600px){ /*smartphone*/
     img[alt="wallpaper"]{
         height: 70%; 
     }
+  
+    #kleidungüberschrift{
+        margin-top: 300px;
+       }
+   }
+   
+
+
+@media (max-width:  600px){ /*smartphone*/
+    img[alt="wallpaper"]{
+        height: 50%; 
+    }
     main {
-        margin-top: 500px;
+        margin-top: 400px;
     }
 
 
@@ -204,5 +205,8 @@ img[src="ball.png"]{
     height: 40px;
     width: 40px;
 }
+#kleidungüberschrift{
+    margin-top: 300px;
+   }
 
 }
