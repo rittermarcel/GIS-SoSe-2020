@@ -32,35 +32,52 @@ header{
     float:left;
     margin-top: -65px;
 }
+.einkaufswagen img{
+height:25px;
+width:25px;
+float:right;
+margin-top:-50px;
+}
+
+.einkaufswagen :hover{
+    height:30px;
+width:30px;
+}
+
+
+
 nav{
     float:right;
     font-size: 22px;
-    color:white;
-    margin-top: -50px;
-   
+    color:black;
+    margin-top:-50px;
+   margin-right: 60px;
    
 }
-nav img{
-    width:25px;
-    height:25px;
-    
-}
+
 nav > a{
 text-decoration: none;
 color:black;
 margin: 0px;
 font-size: 100%;
 letter-spacing: 2px;
-margin-right: 10px;
 
 
 }
+
+nav :hover{
+    font-size: 120%;
+    
+}
+
+
+
 
 .wallpaper{
     width:100%;
     left:0px;
     height:700px;
-    background-image: url(wallpaper.jpg);
+    background-image: url(wallpaper.jpg); 
     position: absolute;
     top:100px;
     -webkit-background-size: cover;
@@ -126,18 +143,25 @@ margin-right: 10px;
 
 @media (max-width:  600px){ /*Smartphone*/
     .logo img{
-     max-width: 30px;
-     margin-top:-35px;
+     max-width: 40px;
+     margin-top:-40px;
      float:left;
+    }
+
+    .einkaufswagen img{
+        margin-top: -30px;
+        width:30px;
+        height:30px;
     }
 h1{
     font-size: 25px;
 }
 nav{
-    position: relative;
-    top:38px;
-    width:90%;
-   
+    position: absolute;
+    top:100px;
+    width:80%;
+    left:auto;
+    right:auto;
     color: ivory;
     font-size: 110%;
     
@@ -149,13 +173,18 @@ nav{
         max-width: 40px;
      margin-top: -40px;
     }
+    .einkaufswagen img{
+        margin-top: -30px;
+        width:30px;
+        height:30px;
+    }
 h1{
     font-size: 25px;
 }
 nav{
     position: absolute;
     top:100px;
-    width:85%;
+    width:80%;
     left:auto;
     right:auto;
    
