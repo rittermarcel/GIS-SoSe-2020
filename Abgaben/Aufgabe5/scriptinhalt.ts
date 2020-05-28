@@ -9,21 +9,21 @@ namespace Aufgabe5 {
     }
 
     //Kleidung
-    const tshirtrot:    Artikel =  { name: "T-Shirt Rot",         beschreibung: "Hohes Material. Sehr beqeuem.",              preis: "15,00€", bild: "tshirtteuer.png" };
-    const tshirtschwarz:    Artikel =  { name: "T-Shirt Schwarz",   beschreibung: "Sehr bequem. Aus Baumwolle",                preis: "8,00€", bild: "tshirtbillig.png" };
-    const hosegelb:   Artikel =  { name: "Hose Gelb",  beschreibung: "Sitzt perfekt",                            preis: "14,00€", bild: "hose.png" };
-    const kapperot:        Artikel =  { name: "Mütze Rot",       beschreibung: "Nie mehr den Kopf verbrennen", preis: "6,00€", bild: "kappe.png" };
-    const brille:   Artikel =  { name: "Brille",  beschreibung: "Sieht lässig aus",                                     preis: "21,00€", bild: "brille.png" };
-    const socken:      Artikel =  { name: "Socken",     beschreibung: "Atmungsaktiv",                 preis: "3,00€", bild: "socke.png" };
-    const bälle:       Artikel =  { name: "Bälle",      beschreibung: "Nur vom besten",                                          preis: "6,50€", bild: "tennisbälle.png" };
+    const tshirtrot: Artikel = {bild: "tshirtteuer.png" , name: "T-Shirt Rot", beschreibung: "Hohes Material. Sehr beqeuem.", preis: "15,00€"};
+    const tshirtschwarz: Artikel = {bild: "tshirtbillig.png", name: "T-Shirt Schwarz", beschreibung: "Sehr bequem. Aus Baumwolle", preis: "8,00€"};
+    const hosegelb: Artikel = {bild: "hose.png", name: "Hose Gelb", beschreibung: "Sitzt perfekt", preis: "14,00€"};
+    const kapperot: Artikel = {bild: "kappe.png", name: "Mütze Rot", beschreibung: "Nie mehr den Kopf verbrennen", preis: "6,00€"};
+    const brille: Artikel = {bild: "brille.png", name: "Brille", beschreibung: "Sieht lässig aus", preis: "21,00€"};
+    const socken: Artikel = {bild: "socke.png", name: "Socken", beschreibung: "Atmungsaktiv", preis: "3,00€"};
+    const bälle: Artikel = {bild: "tennisbälle.png", name: "Bälle", beschreibung: "Nur vom besten", preis: "6,50€"};
 
     
    //Equipment
-    const schläger:      Artikel =  { name: "Schläger",      beschreibung: "Ohne Schläger geht nix",                        preis: "78,00€",    bild: "schläger.png" };
-    const schuhe:         Artikel =  { name: "Schuhe",         beschreibung: "Ultra Geschwindigkeit",                                              preis: "22,00€",     bild: "schuh.png" };
-    const dämpfer:        Artikel =  { name: "Dämpfer",         beschreibung: "Dämpft den Schlag",                         preis: "1,99€",     bild: "dämpfer.png" };
-    const bandage:     Artikel =  { name: "Bandage",     beschreibung: "Schutz für Handgelenke",   preis: "5,00€",    bild: "bandage.png" };
-    const tasche:        Artikel =  { name: "Tasche",        beschreibung: "Sieht professionell aus",                                   preis: "45,00€",     bild: "tasche.png" };
+    const schläger: Artikel = {bild: "schläger.png", name: "Schläger", beschreibung: "Ohne Schläger geht nix", preis: "78,00€"};
+    const schuhe: Artikel = {bild: "schuh.png", name: "Schuhe", beschreibung: "Ultra Geschwindigkeit", preis: "22,00€"};
+    const dämpfer: Artikel = {bild: "dämpfer.png", name: "Dämpfer", beschreibung: "Dämpft den Schlag", preis: "1,99€"};
+    const bandage: Artikel = {bild: "bandage.png", name: "Bandage", beschreibung: "Schutz für Handgelenke", preis: "5,00€"};
+    const tasche: Artikel = {bild: "tasche.png", name: "Tasche", beschreibung: "Sieht professionell aus", preis: "45,00€"};
 
 
     //In array speichern
