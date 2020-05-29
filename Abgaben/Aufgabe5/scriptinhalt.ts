@@ -10,7 +10,7 @@ namespace Aufgabe5 {
 
     //Kleidung
     const tshirtrot: Artikel = {bild: "tshirtteuer.png" , name: "T-Shirt Rot", beschreibung: "Hohes Material. Sehr beqeuem.", preis: "15,00€"};
-    const tshirtschwarz: Artikel = {bild: "tshirtbillig.png", name: "T-Shirt Schwarzz", beschreibung: "Sehr bequem. Aus Baumwolle", preis: "8,00€"};
+    const tshirtschwarz: Artikel = {bild: "tshirtbillig.png", name: "T-Shirt Schwarz", beschreibung: "Sehr bequem. Aus Baumwolle", preis: "8,00€"};
     const hosegelb: Artikel = {bild: "hose.png", name: "Hose Gelb", beschreibung: "Sitzt perfekt", preis: "14,00€"};
     const kapperot: Artikel = {bild: "kappe.png", name: "Mütze Rot", beschreibung: "Nie mehr den Kopf verbrennen", preis: "6,00€"};
     const brille: Artikel = {bild: "brille.png", name: "Brille", beschreibung: "Sieht lässig aus", preis: "21,00€"};
