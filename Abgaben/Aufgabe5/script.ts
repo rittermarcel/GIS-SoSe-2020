@@ -42,7 +42,7 @@ namespace Aufgabe5 {
         //Preis hinzufügen
         let preiselement: HTMLElement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = artikelkleidung[i].preis;
+        preiselement.innerHTML = artikelkleidung[i].preis + "€";
 
         //Br tags
         let brelement: HTMLElement = document.createElement("br");
@@ -90,7 +90,7 @@ namespace Aufgabe5 {
 
         let preiselement: HTMLElement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = artikelequipment[i].preis;
+        preiselement.innerHTML = artikelequipment[i].preis + "€";
 
         
         let brelement: HTMLElement = document.createElement("br");

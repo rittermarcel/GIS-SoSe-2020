@@ -34,7 +34,7 @@ var Aufgabe5;
         //Preis hinzufügen
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe5.artikelkleidung[i].preis;
+        preiselement.innerHTML = Aufgabe5.artikelkleidung[i].preis + "€";
         //Br tags
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
@@ -70,7 +70,7 @@ var Aufgabe5;
         beschreibungelement.innerHTML = Aufgabe5.artikelequipment[i].beschreibung;
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe5.artikelequipment[i].preis;
+        preiselement.innerHTML = Aufgabe5.artikelequipment[i].preis + "€";
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
         let brelement2 = document.createElement("br");
