@@ -3,7 +3,7 @@ namespace Aufgabe6 {
 //Aufgabe 6
 
 
-   
+
 
 
     //Klasse Inhalt
@@ -18,7 +18,7 @@ namespace Aufgabe6 {
 
     //Klasse Kleidung
     let kleidungdiv: HTMLElement = document.createElement("div");
-    kleidungdiv.setAttribute("class", "Kleidung");
+    kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
 
     let preis: number = 0.00;
@@ -78,7 +78,7 @@ namespace Aufgabe6 {
 
     //neue Klasse Equipment
     let equipmentdiv: HTMLElement = document.createElement("div");
-    equipmentdiv.setAttribute("class", "Equipment");
+    equipmentdiv.setAttribute("id", "Equipment");
     divinhalt.appendChild(equipmentdiv);
 
 
@@ -137,17 +137,46 @@ namespace Aufgabe6 {
         
         }
        
-        //Ankerliste erstellen
-        /* let anchorListenerBier: HTMLElement = <HTMLElement> document.getElementById("bierAnker");
-        anchorListenerBier.addEventListener("click", handleClickMenuBier);
-    */
-
-
-
+       
 
 //Den ganzen Inhalt oben in den html main Tag hinzufügen
     document.getElementById("main")?.appendChild(divinhalt);
     
 }
+const kleidungTitel: HTMLElement = document.getElementById("Kleidunglink") as HTMLDivElement;
 
 
+document.getElementById("kleidungnavi")?.addEventListener("click", kleidungklick);
+
+//Kleidung anzeigen
+function kleidungklick(_event: Event): void {
+document.getElementById("Equipment")!.setAttribute("style", "display: none");
+document.getElementById("Equipmentlink")!.setAttribute("style", "display: none");
+
+document.getElementById("Kleidung")!.setAttribute("style", "visibility: visible");
+document.getElementById("Kleidunglink")!.setAttribute("style", "visibility: visible");
+kleidungTitel.innerHTML = "Kleidung";
+}
+
+//Equipment anzeigen
+document.getElementById("equipmentnavi")?.addEventListener("click", equipmentnavi);
+function equipmentnavi(_event: Event): void {
+    document.getElementById("Kleidung")!.setAttribute("style", "display: none");
+    document.getElementById("Equipmentlink")!.setAttribute("style", "display: none");
+    kleidungTitel.innerHTML = "Equipment";
+
+    document.getElementById("Equipment")!.setAttribute("style", "visibility: visible");
+    }
+
+    //Auf den Home Button klicken, um alle Artikel anzuzeigen :)
+document.getElementById("home")?.addEventListener("click", homeklick);
+
+function homeklick(_event: Event): void {
+    document.getElementById("Kleidung")!.setAttribute("style", "visibility: visible");
+    document.getElementById("Kleidunglink")!.setAttribute("style", "visibility: visible");
+
+    document.getElementById("Equipment")!.setAttribute("style", "visibility: visible");
+    document.getElementById("Equipmentlink")!.setAttribute("style", "visibility: visible");
+    kleidungTitel.innerHTML = "Kleidung";
+
+    }
