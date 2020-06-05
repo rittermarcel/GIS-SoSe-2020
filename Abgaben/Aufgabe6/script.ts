@@ -164,7 +164,6 @@ function equipmentnavi(_event: Event): void {
     document.getElementById("Kleidung")!.setAttribute("style", "display: none");
     document.getElementById("Equipmentlink")!.setAttribute("style", "display: none");
     kleidungTitel.innerHTML = "Equipment";
-
     document.getElementById("Equipment")!.setAttribute("style", "visibility: visible");
     }
 
