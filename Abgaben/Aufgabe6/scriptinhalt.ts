@@ -15,18 +15,19 @@ namespace Aufgabe6 {
     const kapperot: Artikel = {bild: "kappe.png", name: "Mütze Rot", beschreibung: "Nie mehr den Kopf verbrennen", preis: 6.00};
     const brille: Artikel = {bild: "brille.png", name: "Brille", beschreibung: "Sieht lässig aus", preis: 21.00};
     const socken: Artikel = {bild: "socke.png", name: "Socken", beschreibung: "Atmungsaktiv", preis: 3.00};
-    const bälle: Artikel = {bild: "tennisbälle.png", name: "Bälle", beschreibung: "Nur vom besten", preis: 6.50};
+    const schuhe: Artikel = {bild: "schuh.png", name: "Schuhe", beschreibung: "Ultra Geschwindigkeit", preis: 22.00};
+    
 
     
    //Equipment
     const schläger: Artikel = {bild: "schläger.png", name: "Schläger", beschreibung: "Ohne Schläger geht nix", preis: 78.00};
-    const schuhe: Artikel = {bild: "schuh.png", name: "Schuhe", beschreibung: "Ultra Geschwindigkeit", preis: 22.00};
+    const bälle: Artikel = {bild: "tennisbälle.png", name: "Bälle", beschreibung: "Nur vom besten", preis: 6.50};
     const dämpfer: Artikel = {bild: "dämpfer.png", name: "Dämpfer", beschreibung: "Dämpft den Schlag", preis: 1.90};
     const bandage: Artikel = {bild: "bandage.png", name: "Bandage", beschreibung: "Schutz für Handgelenke", preis: 5.00};
     const tasche: Artikel = {bild: "tasche.png", name: "Tasche", beschreibung: "Sieht professionell aus", preis: 45.00};
 
 
     //In array speichern
-    export let artikelkleidung: Artikel[] = [tshirtrot, tshirtschwarz, hosegelb, kapperot, brille, socken, bälle];
-    export let artikelequipment: Artikel[] = [schläger, schuhe, dämpfer, bandage, tasche];
+    export let artikelkleidung: Artikel[] = [tshirtrot, tshirtschwarz, hosegelb, kapperot, brille, socken, schuhe];
+    export let artikelequipment: Artikel[] = [schläger, bälle, dämpfer, bandage, tasche];
     }
