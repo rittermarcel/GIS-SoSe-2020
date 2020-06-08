@@ -1,4 +1,4 @@
-namespace Aufgabe6 {
+namespace Aufgabe7 {
     
     let divinhalt: HTMLElement = document.createElement("div");
     divinhalt.setAttribute("class", "inhalt");

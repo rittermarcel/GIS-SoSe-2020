@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe6;
-(function (Aufgabe6) {
+var Aufgabe7;
+(function (Aufgabe7) {
     let divinhalt = document.createElement("div");
     divinhalt.setAttribute("class", "inhalt");
     let kleidungtitel = document.createElement("h2");
@@ -11,22 +11,22 @@ var Aufgabe6;
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
     let preis = 0.00;
-    for (let i = 0; i < Aufgabe6.artikelkleidung.length; i++) {
+    for (let i = 0; i < Aufgabe7.artikelkleidung.length; i++) {
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         kleidungdiv.appendChild(divElement);
         let bildElement = document.createElement("img");
-        bildElement.setAttribute("src", Aufgabe6.artikelkleidung[i].bild);
+        bildElement.setAttribute("src", Aufgabe7.artikelkleidung[i].bild);
         divElement.appendChild(bildElement);
         let titelElement = document.createElement("h3");
         divElement.appendChild(titelElement);
-        titelElement.innerHTML = Aufgabe6.artikelkleidung[i].name;
+        titelElement.innerHTML = Aufgabe7.artikelkleidung[i].name;
         let beschreibungelement = document.createElement("p");
         divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = Aufgabe6.artikelkleidung[i].beschreibung;
+        beschreibungelement.innerHTML = Aufgabe7.artikelkleidung[i].beschreibung;
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe6.artikelkleidung[i].preis + "€";
+        preiselement.innerHTML = Aufgabe7.artikelkleidung[i].preis + "€";
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
         let brelement2 = document.createElement("br");
@@ -37,7 +37,7 @@ var Aufgabe6;
         divElement.appendChild(buttonElement);
         buttonElement.addEventListener("click", kleidungpreis);
         function kleidungpreis(_event) {
-            preis = preis + Aufgabe6.artikelkleidung[i].preis;
+            preis = preis + Aufgabe7.artikelkleidung[i].preis;
             console.log("Gesamtsumme: " + preis + " €");
         }
     }
@@ -48,22 +48,22 @@ var Aufgabe6;
     let equipmentdiv = document.createElement("div");
     equipmentdiv.setAttribute("id", "Equipment");
     divinhalt.appendChild(equipmentdiv);
-    for (let i = 0; i < Aufgabe6.artikelequipment.length; i++) {
+    for (let i = 0; i < Aufgabe7.artikelequipment.length; i++) {
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         equipmentdiv.appendChild(divElement);
         let bildElement = document.createElement("img");
-        bildElement.setAttribute("src", Aufgabe6.artikelequipment[i].bild);
+        bildElement.setAttribute("src", Aufgabe7.artikelequipment[i].bild);
         divElement.appendChild(bildElement);
         let titelElement = document.createElement("h3");
         divElement.appendChild(titelElement);
-        titelElement.innerHTML = Aufgabe6.artikelequipment[i].name;
+        titelElement.innerHTML = Aufgabe7.artikelequipment[i].name;
         let beschreibungelement = document.createElement("p");
         divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = Aufgabe6.artikelequipment[i].beschreibung;
+        beschreibungelement.innerHTML = Aufgabe7.artikelequipment[i].beschreibung;
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe6.artikelequipment[i].preis + "€";
+        preiselement.innerHTML = Aufgabe7.artikelequipment[i].preis + "€";
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
         let brelement2 = document.createElement("br");
@@ -74,7 +74,7 @@ var Aufgabe6;
         buttonElement.addEventListener("click", equipmentpreis);
         divElement.appendChild(buttonElement);
         function equipmentpreis(_event) {
-            preis = preis + Aufgabe6.artikelequipment[i].preis;
+            preis = preis + Aufgabe7.artikelequipment[i].preis;
             console.log("Gesamtsumme " + preis + " €");
         }
     }
@@ -112,5 +112,5 @@ var Aufgabe6;
         document.getElementById("Equipmentlink").setAttribute("style", "visibility: visible");
         kleidungTitel.innerHTML = "Kleidung";
     }
-})(Aufgabe6 || (Aufgabe6 = {}));
+})(Aufgabe7 || (Aufgabe7 = {}));
 //# sourceMappingURL=script.js.map
