@@ -7,7 +7,6 @@ namespace Aufgabe6 {
         preis: number;
         
     }
-
     //Kleidung
     const tshirtrot: Artikel = {bild: "tshirtteuer.png" , name: "T-Shirt Rot", beschreibung: "Hohes Material. Sehr beqeuem.", preis: 15.00 };
     const tshirtschwarz: Artikel = {bild: "tshirtbillig.png", name: "T-Shirt Schwarz", beschreibung: "Sehr bequem. Aus Baumwolle", preis: 8.00};
@@ -16,16 +15,13 @@ namespace Aufgabe6 {
     const brille: Artikel = {bild: "brille.png", name: "Brille", beschreibung: "Sieht lässig aus", preis: 21.00};
     const socken: Artikel = {bild: "socke.png", name: "Socken", beschreibung: "Atmungsaktiv", preis: 3.00};
     const schuhe: Artikel = {bild: "schuh.png", name: "Schuhe", beschreibung: "Ultra Geschwindigkeit", preis: 22.00};
-    
 
-    
    //Equipment
     const schläger: Artikel = {bild: "schläger.png", name: "Schläger", beschreibung: "Ohne Schläger geht nix", preis: 78.00};
     const bälle: Artikel = {bild: "tennisbälle.png", name: "Bälle", beschreibung: "Nur vom besten", preis: 6.50};
     const dämpfer: Artikel = {bild: "dämpfer.png", name: "Dämpfer", beschreibung: "Dämpft den Schlag", preis: 1.90};
     const bandage: Artikel = {bild: "bandage.png", name: "Bandage", beschreibung: "Schutz für Handgelenke", preis: 5.00};
     const tasche: Artikel = {bild: "tasche.png", name: "Tasche", beschreibung: "Sieht professionell aus", preis: 45.00};
-
 
     //In array speichern
     export let artikelkleidung: Artikel[] = [tshirtrot, tshirtschwarz, hosegelb, kapperot, brille, socken, schuhe];
