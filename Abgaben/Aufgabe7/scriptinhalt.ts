@@ -26,4 +26,10 @@ namespace Aufgabe7 {
     //In array speichern
     export let artikelkleidung: Artikel[] = [tshirtrot, tshirtschwarz, hosegelb, kapperot, brille, socken, schuhe];
     export let artikelequipment: Artikel[] = [schläger, bälle, dämpfer, bandage, tasche];
+    export let myJSONkleidung: string =  JSON.stringify(artikelkleidung);
+    export let myJSONequipment: string = JSON.stringify(artikelequipment);
+    
+    
     }
+
+   

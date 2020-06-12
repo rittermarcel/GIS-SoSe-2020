@@ -18,5 +18,7 @@ var Aufgabe7;
     //In array speichern
     Aufgabe7.artikelkleidung = [tshirtrot, tshirtschwarz, hosegelb, kapperot, brille, socken, schuhe];
     Aufgabe7.artikelequipment = [schläger, bälle, dämpfer, bandage, tasche];
+    Aufgabe7.myJSONkleidung = JSON.stringify(Aufgabe7.artikelkleidung);
+    Aufgabe7.myJSONequipment = JSON.stringify(Aufgabe7.artikelequipment);
 })(Aufgabe7 || (Aufgabe7 = {}));
 //# sourceMappingURL=scriptinhalt.js.map
