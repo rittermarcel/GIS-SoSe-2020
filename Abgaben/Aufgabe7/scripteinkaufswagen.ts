@@ -1,23 +1,17 @@
 namespace Aufgabe7 {
+
     let divinhalt: HTMLElement = document.createElement("div");
     divinhalt.setAttribute("class", "inhalt");
-
-    let kleidungdiv: HTMLElement = document.createElement("div");
-    kleidungdiv.setAttribute("id", "Kleidung");
-    divinhalt.appendChild(kleidungdiv);
-
-   
-
+    
     const gesamtSumme: HTMLElement = document.getElementById("Gesamtsumme") as HTMLDivElement;
     gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
     document.getElementById("allesentfernen")?.addEventListener("click", allesentfernen);
 
-    function allesentfernen(_event: Event): void {
-            
-        localStorage.clear();
-        ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
-    }
+    
 
+    let kleidungdiv: HTMLElement = document.createElement("div");
+    kleidungdiv.setAttribute("id", "Kleidung");
+    divinhalt.appendChild(kleidungdiv);
 
     for (let i: number = 0; i < localStorage.counterbeginn; i++) {
         let divElement: HTMLElement = document.createElement("div");
@@ -45,13 +39,26 @@ namespace Aufgabe7 {
         buttonElement.addEventListener("click", entfernen);
 
         function entfernen(_event: Event): void {
-            
+            let gesamtsumme: number = parseInt(localStorage.getItem("Gesamtsumme") + "");
+            let gelöschteSumme: number = parseInt(<string> localStorage.getItem("preisString" + i));
+            let neu: number = gesamtsumme - gelöschteSumme;
+            localStorage.setItem("Gesamtsumme", neu + "€");
+            gesamtSumme.innerHTML = "Gesamtsumme: " + neu + " €";
+
             ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
             
         }
     }
 
    
+    function allesentfernen(_event: Event): void {  
+        localStorage.clear();
+        divinhalt.removeChild(kleidungdiv);
+        localStorage.setItem("Gesamtsumme", 0 + "€");
+        gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
+
+
+    }
 
     document.getElementById("warenkorbmain")?.appendChild(divinhalt);
 }

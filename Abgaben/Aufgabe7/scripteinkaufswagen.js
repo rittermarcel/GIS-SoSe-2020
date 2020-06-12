@@ -3,16 +3,12 @@ var Aufgabe7;
 (function (Aufgabe7) {
     let divinhalt = document.createElement("div");
     divinhalt.setAttribute("class", "inhalt");
-    let kleidungdiv = document.createElement("div");
-    kleidungdiv.setAttribute("id", "Kleidung");
-    divinhalt.appendChild(kleidungdiv);
     const gesamtSumme = document.getElementById("Gesamtsumme");
     gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
     document.getElementById("allesentfernen")?.addEventListener("click", allesentfernen);
-    function allesentfernen(_event) {
-        localStorage.clear();
-        (_event.currentTarget.parentElement).remove();
-    }
+    let kleidungdiv = document.createElement("div");
+    kleidungdiv.setAttribute("id", "Kleidung");
+    divinhalt.appendChild(kleidungdiv);
     for (let i = 0; i < localStorage.counterbeginn; i++) {
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
@@ -38,8 +34,19 @@ var Aufgabe7;
         divElement.appendChild(buttonElement);
         buttonElement.addEventListener("click", entfernen);
         function entfernen(_event) {
+            let gesamtsumme = parseInt(localStorage.getItem("Gesamtsumme") + "");
+            let gelöschteSumme = parseInt(localStorage.getItem("preisString" + i));
+            let neu = gesamtsumme - gelöschteSumme;
+            localStorage.setItem("Gesamtsumme", neu + "€");
+            gesamtSumme.innerHTML = "Gesamtsumme: " + neu + " €";
             (_event.currentTarget.parentElement).remove();
         }
+    }
+    function allesentfernen(_event) {
+        localStorage.clear();
+        divinhalt.removeChild(kleidungdiv);
+        localStorage.setItem("Gesamtsumme", 0 + "€");
+        gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
     }
     document.getElementById("warenkorbmain")?.appendChild(divinhalt);
 })(Aufgabe7 || (Aufgabe7 = {}));
