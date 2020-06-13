@@ -1,8 +1,6 @@
 namespace Aufgabe7 {
     
-    //JSON Dateien erstellen
-    //localStorage.clear();
-    let j: number = 0;
+    let j: number = parseInt(<string> localStorage.getItem("counterbeginn"));
     const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
 
     if (zähler == 0) {
@@ -24,7 +22,7 @@ namespace Aufgabe7 {
     let kleidungdiv: HTMLElement = document.createElement("div");
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
-    let preis: number = 0.00;
+    let preis: number = parseInt(localStorage.getItem("Gesamtsumme") + "");
 
     //Ja ich weis immer noch 2 for Schleifen. Aber ich bekomm es einfach nicht hin, dass der entsprechende Titel jeweils über den Bildern ist.
     for (let i: number = 0; i < artikelkleidung.length; i++) {
@@ -64,7 +62,7 @@ namespace Aufgabe7 {
           localStorage.setItem("beschreibungString" + j, JSON.parse(myJSONkleidung)[i].beschreibung);
           localStorage.setItem("preisString" + j, JSON.parse(myJSONkleidung)[i].preis + "€");
           j++;
-
+          localStorage.setItem("counterbeginn", j + "");
              }
     }
     let equipmentTitel: HTMLElement = document.createElement("h2");
@@ -100,32 +98,39 @@ namespace Aufgabe7 {
         buttonElement.addEventListener("click", equipmentpreis);
         divElement.appendChild(buttonElement);
         function equipmentpreis(_event: Event): void {
-        preis = preis + artikelequipment[i].preis;
+        if (parseInt(localStorage.getItem("Gesamtsumme") + "") == 0) {
+        preis = 0 + artikelequipment[i].preis;
         console.log("Gesamtsumme " + preis + " €");
         localStorage.setItem("Gesamtsumme", preis + "€");
-
+        } else {
+        localStorage.setItem("Gesamtsumme", preis + artikelequipment[i].preis + "€");
+        }
 
         localStorage.setItem("bildString" + j, JSON.parse(myJSONequipment)[i].bild);
         localStorage.setItem("nameString" + j, JSON.parse(myJSONequipment)[i].name);
         localStorage.setItem("beschreibungString" + j, JSON.parse(myJSONequipment)[i].beschreibung);
         localStorage.setItem("preisString" + j, JSON.parse(myJSONequipment)[i].preis + "€");
         j++;
-        
+        localStorage.setItem("counterbeginn", j + "");
     
     }
     }
-    export let counterbeginn: number = 0;
-    
+    let counterbeginn: number = 0;
+    if (parseInt(<string> localStorage.getItem("counterbeginn")) > 0) {
+    counterbeginn = parseInt(<string> localStorage.getItem("counterbeginn"));
+    } else {
+        counterbeginn = 0;
+    }
 
-    //test
-    localStorage.setItem("counterbeginn", counterbeginn + "");
+    
+   // localStorage.setItem("counterbeginn", counterbeginn + "");
     
    
   
     export function allgemeinbutton(_event: Event): void {
         counterbeginn++;
 
-        //test
+        
         localStorage.setItem("counterbeginn", counterbeginn + "");
         
        
@@ -134,11 +139,6 @@ namespace Aufgabe7 {
        
      }
     
-
-
-
-
-
     document.getElementById("main")?.appendChild(divinhalt);
 
     const kleidungTitel: HTMLElement = document.getElementById("Kleidunglink") as HTMLDivElement;

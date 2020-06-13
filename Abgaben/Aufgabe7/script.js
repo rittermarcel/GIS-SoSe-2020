@@ -1,9 +1,7 @@
 "use strict";
 var Aufgabe7;
 (function (Aufgabe7) {
-    //JSON Dateien erstellen
-    //localStorage.clear();
-    let j = 0;
+    let j = parseInt(localStorage.getItem("counterbeginn"));
     const counter = document.getElementById("counter");
     if (Aufgabe7.zähler == 0) {
         counter.innerHTML = "0";
@@ -20,7 +18,7 @@ var Aufgabe7;
     let kleidungdiv = document.createElement("div");
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
-    let preis = 0.00;
+    let preis = parseInt(localStorage.getItem("Gesamtsumme") + "");
     //Ja ich weis immer noch 2 for Schleifen. Aber ich bekomm es einfach nicht hin, dass der entsprechende Titel jeweils über den Bildern ist.
     for (let i = 0; i < Aufgabe7.artikelkleidung.length; i++) {
         let divElement = document.createElement("div");
@@ -56,6 +54,7 @@ var Aufgabe7;
             localStorage.setItem("beschreibungString" + j, JSON.parse(Aufgabe7.myJSONkleidung)[i].beschreibung);
             localStorage.setItem("preisString" + j, JSON.parse(Aufgabe7.myJSONkleidung)[i].preis + "€");
             j++;
+            localStorage.setItem("counterbeginn", j + "");
         }
     }
     let equipmentTitel = document.createElement("h2");
@@ -91,23 +90,33 @@ var Aufgabe7;
         buttonElement.addEventListener("click", equipmentpreis);
         divElement.appendChild(buttonElement);
         function equipmentpreis(_event) {
-            preis = preis + Aufgabe7.artikelequipment[i].preis;
-            console.log("Gesamtsumme " + preis + " €");
-            localStorage.setItem("Gesamtsumme", preis + "€");
+            if (parseInt(localStorage.getItem("Gesamtsumme") + "") == 0) {
+                preis = 0 + Aufgabe7.artikelequipment[i].preis;
+                console.log("Gesamtsumme " + preis + " €");
+                localStorage.setItem("Gesamtsumme", preis + "€");
+            }
+            else {
+                localStorage.setItem("Gesamtsumme", preis + Aufgabe7.artikelequipment[i].preis + "€");
+            }
             localStorage.setItem("bildString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].bild);
             localStorage.setItem("nameString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].name);
             localStorage.setItem("beschreibungString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].beschreibung);
             localStorage.setItem("preisString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].preis + "€");
             j++;
+            localStorage.setItem("counterbeginn", j + "");
         }
     }
-    Aufgabe7.counterbeginn = 0;
-    //test
-    localStorage.setItem("counterbeginn", Aufgabe7.counterbeginn + "");
+    let counterbeginn = 0;
+    if (parseInt(localStorage.getItem("counterbeginn")) > 0) {
+        counterbeginn = parseInt(localStorage.getItem("counterbeginn"));
+    }
+    else {
+        counterbeginn = 0;
+    }
+    // localStorage.setItem("counterbeginn", counterbeginn + "");
     function allgemeinbutton(_event) {
-        Aufgabe7.counterbeginn++;
-        //test
-        localStorage.setItem("counterbeginn", Aufgabe7.counterbeginn + "");
+        counterbeginn++;
+        localStorage.setItem("counterbeginn", counterbeginn + "");
         counter.innerHTML = "" + localStorage.getItem("counterbeginn");
     }
     Aufgabe7.allgemeinbutton = allgemeinbutton;

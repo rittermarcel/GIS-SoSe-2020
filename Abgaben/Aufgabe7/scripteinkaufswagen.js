@@ -40,6 +40,7 @@ var Aufgabe7;
             let neu = gesamtsumme - gelöschteSumme;
             localStorage.setItem("Gesamtsumme", neu + "€");
             gesamtSumme.innerHTML = "Gesamtsumme: " + neu + " €";
+            localStorage.setItem("counterbeginn", Aufgabe7.zähler - 1 + "");
             (_event.currentTarget.parentElement).remove();
         }
     }

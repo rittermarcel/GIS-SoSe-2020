@@ -8,7 +8,7 @@ namespace Aufgabe7 {
     document.getElementById("allesentfernen")?.addEventListener("click", allesentfernen);
 
     export let zähler: number = parseInt(<string> localStorage.getItem("counterbeginn"));
-
+    
     let kleidungdiv: HTMLElement = document.createElement("div");
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
@@ -44,7 +44,8 @@ namespace Aufgabe7 {
             let neu: number = gesamtsumme - gelöschteSumme;
             localStorage.setItem("Gesamtsumme", neu + "€");
             gesamtSumme.innerHTML = "Gesamtsumme: " + neu + " €";
-
+            localStorage.setItem("counterbeginn", zähler - 1 + "");
+           
             ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
             
         }
