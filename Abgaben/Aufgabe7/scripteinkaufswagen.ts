@@ -7,13 +7,13 @@ namespace Aufgabe7 {
     gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
     document.getElementById("allesentfernen")?.addEventListener("click", allesentfernen);
 
-    
+    export let zähler: number = parseInt(<string> localStorage.getItem("counterbeginn"));
 
     let kleidungdiv: HTMLElement = document.createElement("div");
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
 
-    for (let i: number = 0; i < localStorage.counterbeginn; i++) {
+    for (let i: number = 0; i < zähler; i++) {
         let divElement: HTMLElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         kleidungdiv.appendChild(divElement);
@@ -56,9 +56,10 @@ namespace Aufgabe7 {
         divinhalt.removeChild(kleidungdiv);
         localStorage.setItem("Gesamtsumme", 0 + "€");
         gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
-
+        localStorage.setItem("counterbeginn", 0 + "");
 
     }
 
     document.getElementById("warenkorbmain")?.appendChild(divinhalt);
+    console.log(localStorage);
 }

@@ -2,8 +2,15 @@
 var Aufgabe7;
 (function (Aufgabe7) {
     //JSON Dateien erstellen
-    localStorage.clear();
+    //localStorage.clear();
     let j = 0;
+    const counter = document.getElementById("counter");
+    if (Aufgabe7.zähler == 0) {
+        counter.innerHTML = "0";
+    }
+    else {
+        counter.innerHTML = "" + localStorage.getItem("counterbeginn");
+    }
     let divinhalt = document.createElement("div");
     divinhalt.setAttribute("class", "inhalt");
     let kleidungtitel = document.createElement("h2");
@@ -95,12 +102,14 @@ var Aufgabe7;
         }
     }
     Aufgabe7.counterbeginn = 0;
-    localStorage.counterbeginn = 0;
-    const counter = document.getElementById("counter");
+    //test
+    localStorage.setItem("counterbeginn", Aufgabe7.counterbeginn + "");
     function allgemeinbutton(_event) {
         Aufgabe7.counterbeginn++;
-        localStorage.counterbeginn = Number(localStorage.counterbeginn) + 1;
-        counter.innerHTML = "" + Aufgabe7.counterbeginn;
+        //test
+        localStorage.setItem("counterbeginn", Aufgabe7.counterbeginn + "");
+        // counter.innerHTML = "" + counterbeginn;
+        counter.innerHTML = "" + localStorage.getItem("counterbeginn");
     }
     Aufgabe7.allgemeinbutton = allgemeinbutton;
     document.getElementById("main")?.appendChild(divinhalt);

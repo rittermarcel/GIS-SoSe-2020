@@ -1,8 +1,18 @@
 namespace Aufgabe7 {
     
     //JSON Dateien erstellen
-    localStorage.clear();
+    //localStorage.clear();
     let j: number = 0;
+    const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
+
+    if (zähler == 0) {
+        counter.innerHTML = "0";
+    } else {
+        counter.innerHTML = "" + <string> localStorage.getItem("counterbeginn");
+    }
+    
+
+
 
 
     let divinhalt: HTMLElement = document.createElement("div");
@@ -105,17 +115,22 @@ namespace Aufgabe7 {
     }
     }
     export let counterbeginn: number = 0;
-    localStorage.counterbeginn = 0;
+    
+
+    //test
+    localStorage.setItem("counterbeginn", counterbeginn + "");
+    
    
   
-    const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
     export function allgemeinbutton(_event: Event): void {
         counterbeginn++;
-        localStorage.counterbeginn = Number(localStorage.counterbeginn) + 1;
 
-        counter.innerHTML = "" + counterbeginn;
-
+        //test
+        localStorage.setItem("counterbeginn", counterbeginn + "");
         
+       // counter.innerHTML = "" + counterbeginn;
+        counter.innerHTML = "" + <string> localStorage.getItem("counterbeginn");
+       
        
      }
     

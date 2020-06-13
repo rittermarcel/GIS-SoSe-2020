@@ -6,10 +6,11 @@ var Aufgabe7;
     const gesamtSumme = document.getElementById("Gesamtsumme");
     gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
     document.getElementById("allesentfernen")?.addEventListener("click", allesentfernen);
+    Aufgabe7.zähler = parseInt(localStorage.getItem("counterbeginn"));
     let kleidungdiv = document.createElement("div");
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
-    for (let i = 0; i < localStorage.counterbeginn; i++) {
+    for (let i = 0; i < Aufgabe7.zähler; i++) {
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         kleidungdiv.appendChild(divElement);
@@ -47,7 +48,9 @@ var Aufgabe7;
         divinhalt.removeChild(kleidungdiv);
         localStorage.setItem("Gesamtsumme", 0 + "€");
         gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
+        localStorage.setItem("counterbeginn", 0 + "");
     }
     document.getElementById("warenkorbmain")?.appendChild(divinhalt);
+    console.log(localStorage);
 })(Aufgabe7 || (Aufgabe7 = {}));
 //# sourceMappingURL=scripteinkaufswagen.js.map
