@@ -114,12 +114,8 @@ namespace Aufgabe7 {
     
     }
     }
-    let counterbeginn: number = 0;
-    if (parseInt(<string> localStorage.getItem("counterbeginn")) > 0 ) {
-         counterbeginn = parseInt(<string> localStorage.getItem("counterbeginn"));
-    } else {
-        counterbeginn = 0;
-    }
+    export let counterbeginn: number = 0;
+    
 
     //test
     localStorage.setItem("counterbeginn", counterbeginn + "");
