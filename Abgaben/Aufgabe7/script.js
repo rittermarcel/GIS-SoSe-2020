@@ -101,14 +101,19 @@ var Aufgabe7;
             j++;
         }
     }
-    Aufgabe7.counterbeginn = 0;
+    let counterbeginn = 0;
+    if (parseInt(localStorage.getItem("counterbeginn")) > 0) {
+        counterbeginn = parseInt(localStorage.getItem("counterbeginn"));
+    }
+    else {
+        counterbeginn = 0;
+    }
     //test
-    localStorage.setItem("counterbeginn", Aufgabe7.counterbeginn + "");
+    localStorage.setItem("counterbeginn", counterbeginn + "");
     function allgemeinbutton(_event) {
-        Aufgabe7.counterbeginn++;
+        counterbeginn++;
         //test
-        localStorage.setItem("counterbeginn", Aufgabe7.counterbeginn + "");
-        // counter.innerHTML = "" + counterbeginn;
+        localStorage.setItem("counterbeginn", counterbeginn + "");
         counter.innerHTML = "" + localStorage.getItem("counterbeginn");
     }
     Aufgabe7.allgemeinbutton = allgemeinbutton;
