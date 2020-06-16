@@ -52,6 +52,5 @@ var Aufgabe7;
         localStorage.setItem("counterbeginn", 0 + "");
     }
     document.getElementById("warenkorbmain")?.appendChild(divinhalt);
-    console.log(localStorage);
 })(Aufgabe7 || (Aufgabe7 = {}));
 //# sourceMappingURL=scripteinkaufswagen.js.map

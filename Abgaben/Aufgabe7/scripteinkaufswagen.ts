@@ -62,5 +62,5 @@ namespace Aufgabe7 {
     }
 
     document.getElementById("warenkorbmain")?.appendChild(divinhalt);
-    console.log(localStorage);
+   
 }

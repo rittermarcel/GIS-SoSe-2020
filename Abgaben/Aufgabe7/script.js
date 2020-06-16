@@ -19,44 +19,6 @@ var Aufgabe7;
     kleidungdiv.setAttribute("id", "Kleidung");
     divinhalt.appendChild(kleidungdiv);
     let preis = parseInt(localStorage.getItem("Gesamtsumme") + "");
-    //Ja ich weis immer noch 2 for Schleifen. Aber ich bekomm es einfach nicht hin, dass der entsprechende Titel jeweils über den Bildern ist.
-    for (let i = 0; i < Aufgabe7.artikelkleidung.length; i++) {
-        let divElement = document.createElement("div");
-        divElement.setAttribute("class", "artikel");
-        kleidungdiv.appendChild(divElement);
-        let bildElement = document.createElement("img");
-        bildElement.setAttribute("src", JSON.parse(Aufgabe7.myJSONkleidung)[i].bild);
-        divElement.appendChild(bildElement);
-        let titelElement = document.createElement("h3");
-        divElement.appendChild(titelElement);
-        titelElement.innerHTML = JSON.parse(Aufgabe7.myJSONkleidung)[i].name;
-        let beschreibungelement = document.createElement("p");
-        divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = JSON.parse(Aufgabe7.myJSONkleidung)[i].beschreibung;
-        let preiselement = document.createElement("i");
-        divElement.appendChild(preiselement);
-        preiselement.innerHTML = JSON.parse(Aufgabe7.myJSONkleidung)[i].preis + "€";
-        let brelement = document.createElement("br");
-        divElement.appendChild(brelement);
-        let brelement2 = document.createElement("br");
-        divElement.appendChild(brelement2);
-        let buttonElement = document.createElement("button");
-        buttonElement.innerHTML = "Kaufen";
-        buttonElement.addEventListener("click", allgemeinbutton);
-        divElement.appendChild(buttonElement);
-        buttonElement.addEventListener("click", kleidungpreis);
-        function kleidungpreis(_event) {
-            preis = preis + Aufgabe7.artikelkleidung[i].preis;
-            console.log("Gesamtsumme: " + preis + " €");
-            localStorage.setItem("Gesamtsumme", preis + "€");
-            localStorage.setItem("bildString" + j, JSON.parse(Aufgabe7.myJSONkleidung)[i].bild);
-            localStorage.setItem("nameString" + j, JSON.parse(Aufgabe7.myJSONkleidung)[i].name);
-            localStorage.setItem("beschreibungString" + j, JSON.parse(Aufgabe7.myJSONkleidung)[i].beschreibung);
-            localStorage.setItem("preisString" + j, JSON.parse(Aufgabe7.myJSONkleidung)[i].preis + "€");
-            j++;
-            localStorage.setItem("counterbeginn", j + "");
-        }
-    }
     let equipmentTitel = document.createElement("h2");
     equipmentTitel.setAttribute("id", "Equipmentlink");
     equipmentTitel.innerHTML = "Equipment";
@@ -64,48 +26,79 @@ var Aufgabe7;
     let equipmentdiv = document.createElement("div");
     equipmentdiv.setAttribute("id", "Equipment");
     divinhalt.appendChild(equipmentdiv);
-    for (let i = 0; i < Aufgabe7.artikelequipment.length; i++) {
-        let divElement = document.createElement("div");
-        divElement.setAttribute("class", "artikel");
-        equipmentdiv.appendChild(divElement);
-        let bildElement = document.createElement("img");
-        bildElement.setAttribute("src", JSON.parse(Aufgabe7.myJSONequipment)[i].bild);
-        divElement.appendChild(bildElement);
-        let titelElement = document.createElement("h3");
-        divElement.appendChild(titelElement);
-        titelElement.innerHTML = JSON.parse(Aufgabe7.myJSONequipment)[i].name;
-        let beschreibungelement = document.createElement("p");
-        divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = JSON.parse(Aufgabe7.myJSONequipment)[i].beschreibung;
-        let preiselement = document.createElement("i");
-        divElement.appendChild(preiselement);
-        preiselement.innerHTML = JSON.parse(Aufgabe7.myJSONequipment)[i].preis + "€";
-        let brelement = document.createElement("br");
-        divElement.appendChild(brelement);
-        let brelement2 = document.createElement("br");
-        divElement.appendChild(brelement2);
-        let buttonElement = document.createElement("button");
-        buttonElement.innerHTML = "Kaufen";
-        buttonElement.addEventListener("click", allgemeinbutton);
-        buttonElement.addEventListener("click", equipmentpreis);
-        divElement.appendChild(buttonElement);
-        function equipmentpreis(_event) {
-            if (parseInt(localStorage.getItem("Gesamtsumme") + "") == 0) {
-                preis = 0 + Aufgabe7.artikelequipment[i].preis;
-                console.log("Gesamtsumme " + preis + " €");
-                localStorage.setItem("Gesamtsumme", preis + "€");
+    function artikelErstellen() {
+        for (let i = 0; i < Aufgabe7.artikel.length; i++) {
+            if (Aufgabe7.artikel[i].kategorie == "Kleidung") {
+                let divElement = document.createElement("div");
+                divElement.setAttribute("class", "artikel");
+                kleidungdiv.appendChild(divElement);
+                let bildElement = document.createElement("img");
+                bildElement.setAttribute("src", Aufgabe7.artikel[i].bild);
+                divElement.appendChild(bildElement);
+                let titelElement = document.createElement("h3");
+                divElement.appendChild(titelElement);
+                titelElement.innerHTML = Aufgabe7.artikel[i].name;
+                let beschreibungelement = document.createElement("p");
+                divElement.appendChild(beschreibungelement);
+                beschreibungelement.innerHTML = Aufgabe7.artikel[i].beschreibung;
+                let preiselement = document.createElement("i");
+                divElement.appendChild(preiselement);
+                preiselement.innerHTML = Aufgabe7.artikel[i].preis + "€";
+                let brelement = document.createElement("br");
+                divElement.appendChild(brelement);
+                let brelement2 = document.createElement("br");
+                divElement.appendChild(brelement2);
+                let buttonElement = document.createElement("button");
+                buttonElement.innerHTML = "Kaufen";
+                buttonElement.addEventListener("click", allgemeinbutton);
+                divElement.appendChild(buttonElement);
+                buttonElement.addEventListener("click", allgemeinpreis);
             }
-            else {
-                localStorage.setItem("Gesamtsumme", preis + Aufgabe7.artikelequipment[i].preis + "€");
+            else if (Aufgabe7.artikel[i].kategorie == "Equipment") {
+                let divElement = document.createElement("div");
+                divElement.setAttribute("class", "artikel");
+                equipmentdiv.appendChild(divElement);
+                let bildElement = document.createElement("img");
+                bildElement.setAttribute("src", Aufgabe7.artikel[i].bild);
+                divElement.appendChild(bildElement);
+                let titelElement = document.createElement("h3");
+                divElement.appendChild(titelElement);
+                titelElement.innerHTML = Aufgabe7.artikel[i].name;
+                let beschreibungelement = document.createElement("p");
+                divElement.appendChild(beschreibungelement);
+                beschreibungelement.innerHTML = Aufgabe7.artikel[i].beschreibung;
+                let preiselement = document.createElement("i");
+                divElement.appendChild(preiselement);
+                preiselement.innerHTML = Aufgabe7.artikel[i].preis + "€";
+                let brelement = document.createElement("br");
+                divElement.appendChild(brelement);
+                let brelement2 = document.createElement("br");
+                divElement.appendChild(brelement2);
+                let buttonElement = document.createElement("button");
+                buttonElement.innerHTML = "Kaufen";
+                buttonElement.addEventListener("click", allgemeinbutton);
+                buttonElement.addEventListener("click", allgemeinpreis);
+                divElement.appendChild(buttonElement);
             }
-            localStorage.setItem("bildString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].bild);
-            localStorage.setItem("nameString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].name);
-            localStorage.setItem("beschreibungString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].beschreibung);
-            localStorage.setItem("preisString" + j, JSON.parse(Aufgabe7.myJSONequipment)[i].preis + "€");
-            j++;
-            localStorage.setItem("counterbeginn", j + "");
+            function allgemeinpreis(_event) {
+                if (parseInt(localStorage.getItem("Gesamtsumme") + "") == 0) {
+                    preis = 0 + Aufgabe7.artikel[i].preis;
+                    console.log("Gesamtsumme " + preis + " €");
+                    localStorage.setItem("Gesamtsumme", preis + "€");
+                }
+                else {
+                    localStorage.setItem("Gesamtsumme", preis + Aufgabe7.artikel[i].preis + "€");
+                }
+                localStorage.setItem("bildString" + j, Aufgabe7.artikel[i].bild);
+                localStorage.setItem("nameString" + j, Aufgabe7.artikel[i].name);
+                localStorage.setItem("beschreibungString" + j, Aufgabe7.artikel[i].beschreibung);
+                localStorage.setItem("preisString" + j, Aufgabe7.artikel[i].preis + "€");
+                j++;
+                localStorage.setItem("counterbeginn", j + "");
+            }
         }
     }
+    Aufgabe7.artikelErstellen = artikelErstellen;
     let counterbeginn = 0;
     if (parseInt(localStorage.getItem("counterbeginn")) > 0) {
         counterbeginn = parseInt(localStorage.getItem("counterbeginn"));
@@ -113,7 +106,6 @@ var Aufgabe7;
     else {
         counterbeginn = 0;
     }
-    // localStorage.setItem("counterbeginn", counterbeginn + "");
     function allgemeinbutton(_event) {
         counterbeginn++;
         localStorage.setItem("counterbeginn", counterbeginn + "");
