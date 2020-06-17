@@ -91,6 +91,7 @@ namespace Aufgabe7 {
             preis = parseInt(<string> localStorage.getItem("Gesamtsumme") + preis);
             localStorage.setItem("Gesamtsumme", preis + artikel[i].preis + "€");
         }
+      
         localStorage.setItem("bildString" + j, artikel[i].bild);
         localStorage.setItem("nameString" + j, artikel[i].name);
         localStorage.setItem("beschreibungString" + j, artikel[i].beschreibung);

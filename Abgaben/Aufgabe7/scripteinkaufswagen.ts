@@ -45,7 +45,7 @@ namespace Aufgabe7 {
             localStorage.setItem("Gesamtsumme", neu + "€");
             gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
             localStorage.setItem("counterbeginn", zähler - 1 + "");
-            
+            zähler--;
             
            
             ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();

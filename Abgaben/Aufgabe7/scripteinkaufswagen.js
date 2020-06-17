@@ -41,6 +41,7 @@ var Aufgabe7;
             localStorage.setItem("Gesamtsumme", neu + "€");
             gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
             localStorage.setItem("counterbeginn", Aufgabe7.zähler - 1 + "");
+            Aufgabe7.zähler--;
             (_event.currentTarget.parentElement).remove();
         }
     }
