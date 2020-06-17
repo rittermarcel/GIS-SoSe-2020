@@ -42,9 +42,10 @@ namespace Aufgabe7 {
             let gesamtsumme: number = parseInt(localStorage.getItem("Gesamtsumme") + "");
             let gelöschteSumme: number = parseInt(<string> localStorage.getItem("preisString" + i));
             let neu: number = gesamtsumme - gelöschteSumme;
-            localStorage.setItem("Gesamtsumme", neu + "€");
-            gesamtSumme.innerHTML = "Gesamtsumme: " + neu + " €";
+            localStorage.setItem("Gesamtsumme", neu + "");
+            gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + " €";
             localStorage.setItem("counterbeginn", zähler - 1 + "");
+            
            
             ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
             

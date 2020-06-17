@@ -38,8 +38,8 @@ var Aufgabe7;
             let gesamtsumme = parseInt(localStorage.getItem("Gesamtsumme") + "");
             let gelöschteSumme = parseInt(localStorage.getItem("preisString" + i));
             let neu = gesamtsumme - gelöschteSumme;
-            localStorage.setItem("Gesamtsumme", neu + "€");
-            gesamtSumme.innerHTML = "Gesamtsumme: " + neu + " €";
+            localStorage.setItem("Gesamtsumme", neu + "");
+            gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + " €";
             localStorage.setItem("counterbeginn", Aufgabe7.zähler - 1 + "");
             (_event.currentTarget.parentElement).remove();
         }

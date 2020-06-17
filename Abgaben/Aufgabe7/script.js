@@ -87,6 +87,7 @@ var Aufgabe7;
                     localStorage.setItem("Gesamtsumme", preis + "€");
                 }
                 else {
+                    preis = parseInt(localStorage.getItem("Gesamtsumme") + preis);
                     localStorage.setItem("Gesamtsumme", preis + Aufgabe7.artikel[i].preis + "€");
                 }
                 localStorage.setItem("bildString" + j, Aufgabe7.artikel[i].bild);

@@ -88,7 +88,8 @@ namespace Aufgabe7 {
         console.log("Gesamtsumme " + preis + " €");
         localStorage.setItem("Gesamtsumme", preis + "€");
         } else {
-        localStorage.setItem("Gesamtsumme", preis + artikel[i].preis + "€");
+            preis = parseInt(<string> localStorage.getItem("Gesamtsumme") + preis);
+            localStorage.setItem("Gesamtsumme", preis + artikel[i].preis + "€");
         }
         localStorage.setItem("bildString" + j, artikel[i].bild);
         localStorage.setItem("nameString" + j, artikel[i].name);
