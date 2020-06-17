@@ -36,7 +36,7 @@ var Aufgabe7;
         buttonElement.addEventListener("click", entfernen);
         function entfernen(_event) {
             let gesamtsumme = parseInt(localStorage.getItem("Gesamtsumme") + "");
-            let gelöschteSumme = parseInt(localStorage.getItem("preisString" + i));
+            let gelöschteSumme = parseInt(localStorage.getItem("preisString" + i) + "");
             let neu = gesamtsumme - gelöschteSumme;
             localStorage.setItem("Gesamtsumme", neu + "€");
             gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";

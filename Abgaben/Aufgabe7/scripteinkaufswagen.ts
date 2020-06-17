@@ -40,7 +40,7 @@ namespace Aufgabe7 {
 
         function entfernen(_event: Event): void {
             let gesamtsumme: number = parseInt(localStorage.getItem("Gesamtsumme") + "");
-            let gelöschteSumme: number = parseInt(<string> localStorage.getItem("preisString" + i));
+            let gelöschteSumme: number = parseInt(localStorage.getItem("preisString" + i) + "");
             let neu: number = gesamtsumme - gelöschteSumme;
             localStorage.setItem("Gesamtsumme", neu + "€");
             gesamtSumme.innerHTML = "Gesamtsumme: " + localStorage.getItem("Gesamtsumme") + "";
