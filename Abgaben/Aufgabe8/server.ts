@@ -3,10 +3,12 @@ export namespace Aufgabe8 {
 
 
       console.log("Starting server");
+      //Port Number wird unter port gespeichert
       let port: number = Number(process.env.PORT);
+      //Wenn port nicht erreichbar, wird Wert 8100 vergeben
       if (!port)
         port = 8100;
-    
+    //Server und Listener erstellen
       let server: Http.Server = Http.createServer();
       server.addListener("request", handleRequest);
       server.addListener("listening", handleListen);
@@ -15,7 +17,7 @@ export namespace Aufgabe8 {
       function handleListen(): void {
         console.log("Listening");
       }
-    
+      //Server Daten erhalten
       function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
         console.log("I hear voices!");
     
