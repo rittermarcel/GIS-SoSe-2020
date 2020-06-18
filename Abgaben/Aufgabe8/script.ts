@@ -3,20 +3,14 @@ namespace Aufgabe8 {
     let abschicken: HTMLElement = <HTMLButtonElement>document.getElementById("abschicken");
     abschicken.addEventListener("click", abschickenklick);
 
-    async function addToURL(): Promise<string> {
+    async function abschickenklick(): Promise <void> {
         formData = new FormData(document.forms[0]);
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: string = "https://gissommersemester2020.herokuapp.com/" + "?" + query.toString();
-        return url;
-    }
+        let url: string = "https://gissommersemester2020.herokuapp.com/";
+        let urlquery: URLSearchParams = new URLSearchParams(<any>formData);
+        url = url + "?" + urlquery.toString();
 
-    async function abschickenklick(): Promise<void> {
-        getResponse(await addToURL());
+        let antwort: Response = await fetch(url);
+        let antworttext: string = await antwort.text();
+        console.log(antworttext);
     }
-
-    async function getResponse(_url: RequestInfo): Promise<void> {
-        let antwort: Response = await fetch(_url, { method: "get" });
-        let antwort2: string = await antwort.text();
-        console.log(antwort2);
-}
-}
+    }
