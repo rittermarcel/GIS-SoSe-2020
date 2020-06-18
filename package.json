@@ -1,0 +1,21 @@
+{
+  "name": "gissommersemester2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Abgaben/Aufgabe8/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rittermarcel/GIS-SoSe-2020.git"
+  },
+  "author": "Marcel Ritter Buisan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rittermarcel/GIS-SoSe-2020/issues"
+  },
+  "homepage": "https://github.com/rittermarcel/GIS-SoSe-2020#readme"
+}
