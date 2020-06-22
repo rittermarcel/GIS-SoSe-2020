@@ -1,5 +1,11 @@
 namespace Aufgabe7 {
-    
+
+  
+        
+    localStorage.setItem("Gesamtsumme", 0 + "€");
+
+    localStorage.setItem("counterbeginn", 0 + "");
+
     let j: number = parseInt(<string> localStorage.getItem("counterbeginn"));
     const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
 
@@ -88,7 +94,7 @@ namespace Aufgabe7 {
         console.log("Gesamtsumme " + preis + " €");
         localStorage.setItem("Gesamtsumme", preis + "€");
         } else {
-            preis = parseInt(<string> localStorage.getItem("Gesamtsumme") + preis);
+            preis = parseInt(<string> localStorage.getItem("Gesamtsumme"));
             localStorage.setItem("Gesamtsumme", preis + artikel[i].preis + "€");
         }
       

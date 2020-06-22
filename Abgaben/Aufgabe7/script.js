@@ -1,6 +1,8 @@
 "use strict";
 var Aufgabe7;
 (function (Aufgabe7) {
+    localStorage.setItem("Gesamtsumme", 0 + "€");
+    localStorage.setItem("counterbeginn", 0 + "");
     let j = parseInt(localStorage.getItem("counterbeginn"));
     const counter = document.getElementById("counter");
     if (Aufgabe7.zähler == 0) {
@@ -87,7 +89,7 @@ var Aufgabe7;
                     localStorage.setItem("Gesamtsumme", preis + "€");
                 }
                 else {
-                    preis = parseInt(localStorage.getItem("Gesamtsumme") + preis);
+                    preis = parseInt(localStorage.getItem("Gesamtsumme"));
                     localStorage.setItem("Gesamtsumme", preis + Aufgabe7.artikel[i].preis + "€");
                 }
                 localStorage.setItem("bildString" + j, Aufgabe7.artikel[i].bild);
