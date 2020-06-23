@@ -1,6 +1,7 @@
 "use strict";
 var Aufgabe7;
 (function (Aufgabe7) {
+    localStorage.clear();
     localStorage.setItem("Gesamtsumme", 0 + "€");
     localStorage.setItem("counterbeginn", 0 + "");
     let j = parseInt(localStorage.getItem("counterbeginn"));

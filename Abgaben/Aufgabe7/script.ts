@@ -1,7 +1,7 @@
 namespace Aufgabe7 {
 
-  
-        
+    
+    localStorage.clear();
     localStorage.setItem("Gesamtsumme", 0 + "€");
 
     localStorage.setItem("counterbeginn", 0 + "");
