@@ -7,7 +7,8 @@ var Aufgabe9;
     buttonjson.addEventListener("click", buttonclickjson);
     async function buttonclickhtml() {
         let formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
+        //let url: string = "http://localhost:8100";
+        let url = "https://gissommersemester2020.herokuapp.com";
         let query = new URLSearchParams(formData);
         url = url + "/html" + "?" + query.toString();
         let response = await fetch(url);
@@ -17,7 +18,8 @@ var Aufgabe9;
     }
     async function buttonclickjson() {
         let formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
+        //let url: string = "http://localhost:8100";
+        let url = "https://gissommersemester2020.herokuapp.com";
         let query = new URLSearchParams(formData);
         url = url + "/json" + "?" + query.toString();
         await fetch(url);
