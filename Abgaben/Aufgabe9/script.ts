@@ -8,7 +8,7 @@ namespace Aufgabe9 {
 
     async function buttonclickhtml(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
-        //let url: string = "http://localhost:8100";
+       // let url: string = "http://localhost:8100";
         let url: string = "https://gissommersemester2020.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/html" + "?" + query.toString();
@@ -27,11 +27,10 @@ namespace Aufgabe9 {
         let url: string = "https://gissommersemester2020.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/json" + "?" + query.toString();
-        await fetch(url);
-        for (let entry of query) {
-            console.log(entry);
-            console.log("Objekt: " + entry[0] + " Wert:" + entry[1]);
-        }
+        //BUGS gefixt
+        let response: Response = await fetch(url);
+        let responseString: string = await response.json();
+        console.log(responseString);
       
     }
 
