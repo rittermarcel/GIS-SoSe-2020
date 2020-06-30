@@ -2,7 +2,7 @@ import * as Http from "http";
 import * as Url from "url";
 export namespace Aufgabe9 {
 
-
+//mongodb+srv://gisuser2020:<password>@marcelgis.1jm82.mongodb.net/<dbname>?retryWrites=true&w=majority
       console.log("Starting server");
       //Port Number wird unter port gespeichert
       let port: number = Number(process.env.PORT);
