@@ -4,7 +4,7 @@ import * as Mongo from "mongodb";
 export namespace Aufgabe11 {
       
       let studentList: Mongo.Collection;
-      let databaseUrl: string = "mongodb+srv://gisuser2020:pwdv1Y6ayeEBvevpAf@marcelgis.1jm82.mongodb.net/Test?retryWrites=true&w=majority";
+      let databaseUrl: string = "mongodb+srv://gisuser2020:dv1Y6ayeEBvevpAf@marcelgis.1jm82.mongodb.net/Test?retryWrites=true&w=majority";
       //let databaseUrl: string = "mongodb://localhost: 27017";
 
       console.log("Starting server");
