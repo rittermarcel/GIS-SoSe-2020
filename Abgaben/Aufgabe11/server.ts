@@ -62,7 +62,7 @@ export namespace Aufgabe11 {
              
               _response.write(JSON.stringify(await studentList.find().toArray()));
           
-        }
+        } 
         }
     
         _response.end();

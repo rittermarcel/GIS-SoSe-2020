@@ -6,6 +6,8 @@ namespace Aufgabe11 {
     let buttonholen: HTMLButtonElement = <HTMLButtonElement>document.getElementById("holen");
     buttonholen.addEventListener("click", buttonclickholen);
 
+   
+
     let htmltext: HTMLElement = <HTMLElement>document.getElementById("text");
 
 
@@ -23,9 +25,6 @@ namespace Aufgabe11 {
 
 
     async function buttonclickholen(): Promise<void> {
-        
-        
-       
         let url: string = "https://gissommersemester2020.herokuapp.com";
         
         //let url: string = "http://localhost:8100";
@@ -35,8 +34,7 @@ namespace Aufgabe11 {
         let responseString: string = await response.text();
         htmltext.innerHTML = responseString;
         console.log("holen");
-        
-      
     }
+
 
 }
