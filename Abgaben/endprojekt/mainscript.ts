@@ -1,5 +1,17 @@
 namespace endprojekt {
     export function Maintextaufrufen(): void {
+        let j: number = 1;
+        let text: string = "";
+        let preis: number = 0;
+        let zählerbestellungen: number = 0;
+        let preishtml: HTMLElement = <HTMLElement>document.getElementById("preis");
+        let streußelbestellung: HTMLElement = <HTMLElement>document.getElementById("streußelsortebestellt");
+        let eisbestellung: HTMLElement = <HTMLElement>document.getElementById("eissortebestellt");
+        let waffellbestellung: HTMLElement = <HTMLElement>document.getElementById("waffelsortebestellt");
+        localStorage.setItem("zählerbestellungen", 0 + "");
+        
+        
+
         let beschreibunghtml: HTMLElement = <HTMLElement>document.getElementById("beschreibung");
         beschreibunghtml.innerHTML = maintext[0].beschreibung1;
 
@@ -14,8 +26,192 @@ namespace endprojekt {
 
         let umweltschonendhtml: HTMLElement = <HTMLElement>document.getElementById("umweltschonendbeschreibung");
         umweltschonendhtml.innerHTML = maintext[0].umweltschonendbeschreibung;
-    }
-    
 
+
+        let divinhalt: HTMLElement = document.createElement("div");
+        divinhalt.setAttribute("class", "inhalt");
+
+        let bestellungbild: HTMLElement = document.createElement("img");
+        bestellungbild.setAttribute("src", "Bilder/notizblock.png");
+        bestellungbild.setAttribute("id", "notizblock");
+        divinhalt.appendChild(bestellungbild);
+
+
+        let divElement: HTMLElement = document.createElement("div");
+        divElement.setAttribute("class", "eisgenerieren");
+        divinhalt.appendChild(divElement);
+
+        let waffeltitel: HTMLElement = document.createElement("p");
+        waffeltitel.setAttribute("id", "waffeltitel");
+        waffeltitel.innerHTML = "Wähle deine Waffelsorte aus:";
+        divElement.appendChild(waffeltitel);
+
+        let eistitel: HTMLElement = document.createElement("p");
+        eistitel.setAttribute("id", "eistitel");
+        eistitel.innerHTML = "Wähle deine Eissorte aus:";
+        divElement.appendChild(eistitel);
+
+        let streußeltitel: HTMLElement = document.createElement("p");
+        streußeltitel.setAttribute("id", "streußeltitel");
+        streußeltitel.innerHTML = "Wähle deine Streußelsorte aus:";
+        divElement.appendChild(streußeltitel);
+
+        let info: HTMLElement = document.createElement("p");
+        info.setAttribute("id", "info");
+        info.innerHTML = "Erstelle noch ein Eis aus oder gib deine Adressdaten ein und klicke auf Bestellen<br><br><br>";
+        divElement.appendChild(info);
+
+        let neueseis: HTMLElement = document.createElement("Button");
+        neueseis.setAttribute("name", "neueseis");
+        neueseis.setAttribute("value", "neueseis");
+        neueseis.setAttribute("id", "neueseis");
+        let label: HTMLElement = document.createElement("label");
+        label.setAttribute("for", "neueseis");
+        label.innerHTML = "In den Warenkorb" + "<br><br>";
+        neueseis.addEventListener("click", neueseisklick);
+        info.appendChild(neueseis);
+        info.appendChild(label);
+
+        let löschen: HTMLElement = document.createElement("Button");
+        let labellöschen: HTMLElement = document.createElement("label");
+        labellöschen.innerHTML = "Bestellung löschen<br>";
+        löschen.addEventListener("click", löschenklick);
+        info.appendChild(löschen);
+        info.appendChild(labellöschen);
+
+       
+        function löschenklick(_event: Event): void {
+            streußelbestellung.innerHTML = "<b>Streußelsorte:</b>";
+            eisbestellung.innerHTML = "<b>Eissorte:</b>";
+            waffellbestellung.innerHTML = "<b>Waffelsorte:</b>";
+            localStorage.clear();
+            preis = 0;
+            preishtml.innerHTML = "<b>Preis: </b>" + preis + " €";
+        
+        }
+
+        function neueseisklick(_event: Event): void {
+            localStorage.setItem("Eissortebestellung" + zählerbestellungen, waffellbestellung.textContent + "" + eisbestellung.textContent + " " + streußelbestellung.textContent + " " );
+            zählerbestellungen ++;
+            streußelbestellung.innerHTML = "<b>Streußelsorte:</b>";
+            eisbestellung.innerHTML = "<b>Eissorte:</b>";
+            waffellbestellung.innerHTML = "<b>Waffelsorte:</b>";
+            preishtml.innerHTML = "<b>Preis: </b>" + 0   + " €";
+            console.log(localStorage);
+            
+        
+        }
+
+
+        for (let i: number = 0; i < eis.length; i++) {
+        if (eis [i].kategorie == "waffel" ) {
+        let klasse: HTMLElement = document.createElement("div");
+        klasse.setAttribute("class", "waffelartikel");
+        waffeltitel.appendChild(klasse);
+
+
+
+        let element: HTMLElement = document.createElement("Button");
+        element.setAttribute("name", "waffel");
+        element.setAttribute("value", eis[i].name);
+        element.setAttribute("id", eis[i].name);
+        element.addEventListener("click", waffelklick);
+        let label: HTMLElement = document.createElement("label");
+        label.setAttribute("for", eis[i].name);
+        label.innerHTML = eis[i].name + "<br>" + "<br>";
+        klasse.appendChild(element);
+        klasse.appendChild(label);
+    }
+       else if (eis[i].kategorie == "eis") {
+        let klasse: HTMLElement = document.createElement("div");
+        klasse.setAttribute("class", "eisartikel");
+        eistitel.appendChild(klasse);
+
+
+
+        let element: HTMLElement = document.createElement("Button");
+        element.setAttribute("value", eis[i].name);
+        element.addEventListener("click", eisklick);
+       
+        let label: HTMLElement = document.createElement("label");
+        label.setAttribute("for", eis[i].name);
+        label.innerHTML = eis[i].name + "<br>" + "<br>";
+        klasse.appendChild(element);
+        klasse.appendChild(label);
+    }
+    else if (eis[i].kategorie == "streußel") {
+        let klasse: HTMLElement = document.createElement("div");
+        klasse.setAttribute("class", "streußelartikel");
+        streußeltitel.appendChild(klasse);
+
+        let element: HTMLElement = document.createElement("Button");
+        element.setAttribute("name", "streußel");
+        element.setAttribute("value", eis[i].name);
+        element.setAttribute("id", eis[i].name);
+        element.addEventListener("click", streußelklick);
+        let label: HTMLElement = document.createElement("label");
+        label.setAttribute("for", eis[i].name);
+        label.innerHTML = eis[i].name + "<br>" + "<br>";
+        klasse.appendChild(element);
+        klasse.appendChild(label);
+
+    }
+       
+
+
+
+        function waffelklick(_event: Event): void {
+        localStorage.setItem("waffelsorte", eis[i].name);
+        
+        waffellbestellung.innerHTML = "<b>Waffelsorte:</b> 1X" + eis[i].name;
+        preis = preis + eis[i].preis;
+        preishtml.innerHTML = "<b>Preis: </b>" + preis + " €";
+
+        }
+
+
+
+
+
+        function streußelklick(_event: Event): void {
+        localStorage.setItem("streußelsorte", eis[i].name);
+        
+        streußelbestellung.innerHTML = "<b>Streußelsorte:</b> 1X" + eis[i].name;
+        preis = preis + eis[i].preis;
+        preishtml.innerHTML = "<b>Preis: </b>" + preis + " €";
+        
+
+}
+        function eisklick(_event: Event): void {
+            localStorage.setItem("eissorte" + j, eis[i].name);
+            
+            if ( j > 6 ) {
+                console.log("Maximale Anzahl an Kugeln erreicht");
+                } else {
+
+            text = text + "1X" + localStorage.getItem("eissorte" + j) + ", ";
+            eisbestellung.innerHTML = "<b>Eissorte:</b> " + text;
+            preis = preis + eis[i].preis;
+            preishtml.innerHTML = "<b>Preis: </b>" + preis + " €";
+            console.log(preis + " €");
+
+
+            
+
+            j++;
+            console.log(text);
+        }
+            
+}
+        
+        
+        
+}
+
+
+        document.getElementById("main")?.appendChild(divinhalt);
+    }
+
+    
 
     }

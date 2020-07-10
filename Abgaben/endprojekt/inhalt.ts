@@ -8,10 +8,10 @@ namespace endprojekt {
         umweltschonendbeschreibung: string;
     }
     export interface Eis {
-        waffelsorte: string;
-        eissorte: string;
-        streußelsorte: string;
+        name: string;
         preis: number;
+        kategorie: string;
+        
     }
 
     export let maintext: Maintext[];

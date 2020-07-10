@@ -2,9 +2,16 @@
 "hausgemachtbeschreibung": "Unser Eis stellen wir in unserer eigenen Manufaktur her, traditionell nach italienischem Handwerk. Unsere Kreationen basieren auf huseigenen Rezepturen.",
 "taeglichfrischbeschreibung": "Wir produzieren in jedem Haus täglich frisch. Unsere Manufaktur ist jedezeit einsehbar.", 
 "umweltschonendbeschreibung": "Wir legen Wert auf unsere Umwelt. Mit dem Einsatz von Recyclingmaterialen, die zu 100% abbaubar sind, sowie einem laufend optimieren Abfallkonzept steuern wir unseren Teil zu einer nachhaltigen Umweltbilanz bei." },
-{"eissorte": "Schokolade", "preis": 1},
-{"waffelsorte": "Normale Waffel", "preis": 0.2},
-{"streußelsorte": "Schokolade", "preis": 0.3}
+
+{"name": "Schokoladen Eis", "preis": 1, "kategorie": "eis"},
+{"name": "Vanille Eis", "preis": 1, "kategorie": "eis"},
+
+{"name": "Normale Waffel", "preis": 0.2, "kategorie": "waffel"},
+{"name": "Schoko Waffel", "preis": 0.2, "kategorie": "waffel"},
+{"name": "Becher", "preis": 0.2, "kategorie": "waffel"},
+
+{"name": "Schokolade", "preis": 0.3, "kategorie": "streußel"},
+{"name": "Frucht", "preis": 0.3, "kategorie": "streußel"}
 
 
 
