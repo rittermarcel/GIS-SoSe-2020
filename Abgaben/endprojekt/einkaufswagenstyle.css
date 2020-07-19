@@ -1,5 +1,50 @@
-form{
+
+button{
+    width:100px;
+    height:20px;
+}
+#bestellungen{
+    width:300px;
     position: relative;
-    top:300px;
-    margin-left: 35%;
+    top:0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.bestellungen {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 250px;
+    
+}
+#formdiv{
+    position: relative;
+    top:600px;
+    margin-left: 43%;
+    margin-top: 200px;
+    
+}
+
+#gesamtpreis{
+    position: relative;
+    top:200px;
+    text-align: center;
+    
+}
+
+@media (max-width:  600px){ 
+    #bestellungen{
+        float:left;
+        right:300px;
+        width:500px;
+        position: relative;
+        top:250px;
+      
+    }
+   #formdiv{
+       position: relative;
+       top:-1000px;
+       right:450px;
+   }
+
 }

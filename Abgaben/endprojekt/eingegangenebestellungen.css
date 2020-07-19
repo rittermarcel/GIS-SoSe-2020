@@ -1,0 +1,23 @@
+#einsehen{
+    position: relative;
+    top:250px;
+    left:40%;
+    float:left;
+    width:300px;
+    height:60px;
+}
+#text{
+    position: relative;
+    top:300px;
+    
+}
+@media (max-width:  600px){ 
+    #einsehen{
+        position: relative;
+        top:250px;
+        left:20%;
+        float:left;
+        width:300px;
+        height:60px;
+    }
+}

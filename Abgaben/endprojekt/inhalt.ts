@@ -11,7 +11,8 @@ namespace endprojekt {
         name: string;
         preis: number;
         kategorie: string;
-        
+        kategorie2: string;
+        bild: string;
     }
 
     export let maintext: Maintext[];

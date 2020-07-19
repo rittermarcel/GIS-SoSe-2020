@@ -3,15 +3,19 @@
 "taeglichfrischbeschreibung": "Wir produzieren in jedem Haus täglich frisch. Unsere Manufaktur ist jedezeit einsehbar.", 
 "umweltschonendbeschreibung": "Wir legen Wert auf unsere Umwelt. Mit dem Einsatz von Recyclingmaterialen, die zu 100% abbaubar sind, sowie einem laufend optimieren Abfallkonzept steuern wir unseren Teil zu einer nachhaltigen Umweltbilanz bei." },
 
-{"name": "Schokoladen Eis", "preis": 1, "kategorie": "eis"},
-{"name": "Vanille Eis", "preis": 1, "kategorie": "eis"},
+{"name": "Schokoladen Eis", "preis": 1.00, "kategorie": "eis" , "kategorie2": "schoko", "bild": "Bilder/schokokugel.png"},
+{"name": "Vanille Eis", "preis": 1.00, "kategorie": "eis", "kategorie2":"vanille", "bild": "Bilder/vanilleeiskugel.png"},
+{"name": "Erdbeer Eis", "preis": 1.00, "kategorie": "eis", "kategorie2":"erdbeere" , "bild": "Bilder/erdbeerkugel.png"},
+{"name": "Oreo Eis", "preis": 1.00, "kategorie": "eis", "kategorie2":"oreo" , "bild": "Bilder/oreo.png"},
+{"name": "Zitronen Eis", "preis": 1.00, "kategorie": "eis", "kategorie2":"zitrone" , "bild": "Bilder/zitrone.png" },
 
-{"name": "Normale Waffel", "preis": 0.2, "kategorie": "waffel"},
-{"name": "Schoko Waffel", "preis": 0.2, "kategorie": "waffel"},
-{"name": "Becher", "preis": 0.2, "kategorie": "waffel"},
 
-{"name": "Schokolade", "preis": 0.3, "kategorie": "streußel"},
-{"name": "Frucht", "preis": 0.3, "kategorie": "streußel"}
+{"name": "Normale Waffel", "preis": 0.20, "kategorie": "waffel", "kategorie2": "waffel", "bild": "Bilder/waffel.png"},
+{"name": "Schoko Waffel", "preis": 0.20, "kategorie": "waffel", "kategorie2": "waffel", "bild": "Bilder/schokowaffel.png" },
+{"name": "Becher", "preis": 0.20, "kategorie": "waffel", "kategorie2": "restliches", "bild": "Bilder/becher.png"},
+
+{"name": "Schokolade", "preis": 0.30, "kategorie": "streußel", "kategorie2": "schokostreußel","bild": "Bilder/schokostreußel.png"},
+{"name": "Frucht", "preis": 0.30, "kategorie": "streußel", "kategorie2": "fruchtstreußel", "bild": "Bilder/streußelfrucht.png"}
 
 
 
