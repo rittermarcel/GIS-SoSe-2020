@@ -7,6 +7,7 @@ var endprojekt;
     let bestellungenform = document.getElementById("bestellungenform");
     bestellungenform.hidden = true;
     let gesamttext = "";
+    let serverantwort = document.getElementById("serverantwort");
     let formData;
     let buttonbestellen = document.getElementById("bestellen");
     buttonbestellen.addEventListener("click", buttonclickbestellen);
@@ -17,6 +18,7 @@ var endprojekt;
         let query = new URLSearchParams(formData);
         url = url + "/bestellen" + "?" + query.toString();
         await fetch(url);
+        serverantwort.innerHTML = "Bestellt! Vielen Dank :)";
     }
     let divinhalt = document.createElement("div");
     divinhalt.setAttribute("class", "bestellungen");

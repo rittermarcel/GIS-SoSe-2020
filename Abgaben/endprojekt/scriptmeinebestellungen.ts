@@ -5,6 +5,8 @@ let gesamtpreishtml: HTMLElement = <HTMLElement>document.getElementById("gesamtp
 let bestellungenform: HTMLElement = <HTMLElement>document.getElementById("bestellungenform");
 bestellungenform.hidden = true;
 let gesamttext: string = "";
+let serverantwort: HTMLElement = <HTMLElement>document.getElementById("serverantwort");
+
 
 
 
@@ -18,13 +20,14 @@ buttonbestellen.addEventListener("click", buttonclickbestellen);
 
 
 async function buttonclickbestellen(): Promise<void> {
+        
         formData = new FormData(document.forms[0]);
         let url: string = "http://localhost:8100";
        // let url: string = "https://gissommersemester2020.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/bestellen" + "?" + query.toString();
         await fetch(url);
-
+        serverantwort.innerHTML = "Bestellt! Vielen Dank :)";
     }
 
 

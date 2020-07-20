@@ -13,7 +13,12 @@ var endprojekt;
         let streußelbestellung = document.getElementById("streußelsortebestellt");
         let eisbestellung = document.getElementById("eissortebestellt");
         let waffellbestellung = document.getElementById("waffelsortebestellt");
+        let startlink = document.getElementById("startlink");
+        startlink.addEventListener("click", startklick);
         localStorage.setItem("zählerbestellungen", 0 + "");
+        function startklick(_event) {
+            window.location.href = "#eiserstellentitel";
+        }
         let beschreibunghtml = document.getElementById("beschreibung");
         beschreibunghtml.innerHTML = endprojekt.maintext[0].beschreibung1;
         let titelhtml = document.getElementById("titel");

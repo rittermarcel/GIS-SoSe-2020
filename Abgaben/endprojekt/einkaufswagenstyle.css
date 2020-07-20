@@ -31,6 +31,9 @@ button{
     text-align: center;
     
 }
+#serverantwort {
+    font-size: 15;
+}
 
 @media (max-width:  600px){ 
     #bestellungen{

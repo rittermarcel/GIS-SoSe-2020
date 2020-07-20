@@ -13,9 +13,13 @@ namespace endprojekt {
         let streußelbestellung: HTMLElement = <HTMLElement>document.getElementById("streußelsortebestellt");
         let eisbestellung: HTMLElement = <HTMLElement>document.getElementById("eissortebestellt");
         let waffellbestellung: HTMLElement = <HTMLElement>document.getElementById("waffelsortebestellt");
+        let startlink: HTMLElement = <HTMLElement>document.getElementById("startlink");
+        startlink.addEventListener("click", startklick);
         localStorage.setItem("zählerbestellungen", 0 + "");
         
-        
+        function startklick(_event: Event): void {
+            window.location.href = "#eiserstellentitel";
+        }
         
 
         let beschreibunghtml: HTMLElement = <HTMLElement>document.getElementById("beschreibung");
