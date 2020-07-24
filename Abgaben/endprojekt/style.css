@@ -25,7 +25,7 @@ margin: 0 auto;
     margin-left: 100px;
     
 }
-.navigation img{
+.navigation img[alt=einkaufswagen]{
     width:30px;
     height:30px;
     float: right;
@@ -161,7 +161,7 @@ header{
     margin-left: 80px;
     margin-right: 80px;
 }
-.hausgemacht p{
+.hausgemacht > p{
     font-size: 14px;
     max-width:200px;
     position: relative;
@@ -196,7 +196,7 @@ a{
     
     
 }
-#schokokugel{
+#kugel{
     width:100px;
     position: relative;
     margin-top: -45px;
@@ -327,7 +327,7 @@ a{
         left:-390px;
         margin-top: -700px;
     }
-    #schokokugel{
+    #kugel{
         width:100px;
         position: relative;
         margin-top: -45px;
@@ -374,7 +374,7 @@ a{
         left:-280px;
         margin-top: -700px;
     }
-    #schokokugel{
+    #kugel{
         width:100px;
         position: relative;
         margin-top: -45px;
