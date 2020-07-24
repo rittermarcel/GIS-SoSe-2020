@@ -3,6 +3,7 @@ button{
     width:100px;
     height:20px;
 }
+
 #bestellen {
     width:170px;
     height:30px;
@@ -36,13 +37,13 @@ background-color: darkred;
 
 
 
-#gesamtpreis{
+#gesamtPreis{
     position: relative;
     top:200px;
     text-align: center;
     
 }
-#serverantwort {
+#serverAntwort {
     font-size: 15;
 }
 

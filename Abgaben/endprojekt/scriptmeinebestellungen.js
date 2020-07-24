@@ -3,11 +3,11 @@ var endprojekt;
 (function (endprojekt) {
     let zähler = parseInt(localStorage.getItem("zählerbestellungen"));
     let gesamtpreis = 0;
-    let gesamtpreishtml = document.getElementById("gesamtpreis");
+    let gesamtpreishtml = document.getElementById("gesamtPreis");
     let bestellungenform = document.getElementById("bestellungenform");
     bestellungenform.hidden = true;
     let gesamttext = "";
-    let serverantwort = document.getElementById("serverantwort");
+    let serverantwort = document.getElementById("serverAntwort");
     let formData;
     let buttonbestellen = document.getElementById("bestellen");
     buttonbestellen.addEventListener("click", buttonclickbestellen);

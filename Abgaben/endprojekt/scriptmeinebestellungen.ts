@@ -1,11 +1,11 @@
 namespace endprojekt {
 let zähler: number = parseInt(<string>localStorage.getItem("zählerbestellungen"));
 let gesamtpreis: number = 0;
-let gesamtpreishtml: HTMLElement = <HTMLElement>document.getElementById("gesamtpreis");
+let gesamtpreishtml: HTMLElement = <HTMLElement>document.getElementById("gesamtPreis");
 let bestellungenform: HTMLElement = <HTMLElement>document.getElementById("bestellungenform");
 bestellungenform.hidden = true;
 let gesamttext: string = "";
-let serverantwort: HTMLElement = <HTMLElement>document.getElementById("serverantwort");
+let serverantwort: HTMLElement = <HTMLElement>document.getElementById("serverAntwort");
 
 
 

@@ -11,16 +11,16 @@ namespace endprojekt {
         let zählerBestellungen: number = 0;
         let counterHtml: HTMLElement = <HTMLElement>document.getElementById("counter");
         let preisHtml: HTMLElement = <HTMLElement>document.getElementById("preis");
-        let streußelBestellung: HTMLElement = <HTMLElement>document.getElementById("streußelsortebestellt");
-        let eisBestellung: HTMLElement = <HTMLElement>document.getElementById("eissortebestellt");
-        let waffelBestellung: HTMLElement = <HTMLElement>document.getElementById("waffelsortebestellt");
+        let streußelBestellung: HTMLElement = <HTMLElement>document.getElementById("streußelSorteBestellt");
+        let eisBestellung: HTMLElement = <HTMLElement>document.getElementById("eisSorteBestellt");
+        let waffelBestellung: HTMLElement = <HTMLElement>document.getElementById("waffelSorteBestellt");
         let startLink: HTMLElement = <HTMLElement>document.getElementById("startlink");
       
         startLink.addEventListener("click", startKlick);
         localStorage.setItem("zählerbestellungen", 0 + "");
         
         function startKlick(_event: Event): void {
-            window.location.href = "#eiserstellentitel";
+            window.location.href = "#eisErstellenTitel";
         }
         
 
@@ -30,13 +30,13 @@ namespace endprojekt {
         let titelHtml: HTMLElement = <HTMLElement>document.getElementById("titel");
         titelHtml.innerHTML = maintext[0].titel;
 
-        let hausgemachtHtml: HTMLElement = <HTMLElement>document.getElementById("hausgemachtbeschreibung");
+        let hausgemachtHtml: HTMLElement = <HTMLElement>document.getElementById("hausgemachtBeschreibung");
         hausgemachtHtml.innerHTML = maintext[0].hausgemachtbeschreibung;
 
-        let taeglichFrischHtml: HTMLElement = <HTMLElement>document.getElementById("taeglichfrischbeschreibung");
+        let taeglichFrischHtml: HTMLElement = <HTMLElement>document.getElementById("taeglichFrischBeschreibung");
         taeglichFrischHtml.innerHTML = maintext[0].taeglichfrischbeschreibung;
 
-        let umweltschonendHtml: HTMLElement = <HTMLElement>document.getElementById("umweltschonendbeschreibung");
+        let umweltschonendHtml: HTMLElement = <HTMLElement>document.getElementById("umweltschonendBeschreibung");
         umweltschonendHtml.innerHTML = maintext[0].umweltschonendbeschreibung;
 
 
@@ -51,26 +51,26 @@ namespace endprojekt {
         
 
         let divElement: HTMLElement = document.createElement("div");
-        divElement.setAttribute("class", "eisgenerieren");
+        divElement.setAttribute("class", "eisGenerieren");
         divInhalt.appendChild(divElement);
 
-        let eisBild: HTMLElement = document.getElementById("eisbild") as HTMLDivElement;
+        let eisBild: HTMLElement = document.getElementById("eisBild") as HTMLDivElement;
         divInhalt.appendChild(eisBild);
 
        
 
         let waffelTitel: HTMLElement = document.createElement("p");
-        waffelTitel.setAttribute("id", "waffeltitel");
+        waffelTitel.setAttribute("id", "waffelTitel");
         waffelTitel.innerHTML = "Wähle deine Waffelsorte aus:";
         divElement.appendChild(waffelTitel);
 
         let eisTitel: HTMLElement = document.createElement("p");
-        eisTitel.setAttribute("id", "eistitel");
+        eisTitel.setAttribute("id", "eisTitel");
         eisTitel.innerHTML = "Wähle deine Eissorte aus:";
         divElement.appendChild(eisTitel);
 
         let streußelTitel: HTMLElement = document.createElement("p");
-        streußelTitel.setAttribute("id", "streußeltitel");
+        streußelTitel.setAttribute("id", "streußelTitel");
         streußelTitel.innerHTML = "Wähle deine Streußelsorte aus:";
         divElement.appendChild(streußelTitel);
 
@@ -80,11 +80,11 @@ namespace endprojekt {
         divElement.appendChild(info);
 
         let neuesEis: HTMLElement = document.createElement("Button");
-        neuesEis.setAttribute("name", "neueseis");
-        neuesEis.setAttribute("value", "neueseis");
-        neuesEis.setAttribute("id", "neueseis");
+        neuesEis.setAttribute("name", "neuesEis");
+        neuesEis.setAttribute("value", "neuesEis");
+        neuesEis.setAttribute("id", "neuesEis");
         let label: HTMLElement = document.createElement("label");
-        label.setAttribute("for", "neueseis");
+        label.setAttribute("for", "neuesEis");
         label.innerHTML = "In den Warenkorb" + "<br><br>";
         neuesEis.addEventListener("click", neuesEisKlick);
         info.appendChild(neuesEis);
@@ -94,14 +94,14 @@ namespace endprojekt {
         let löschen: HTMLElement = document.createElement("Button");
         let labelLöschen: HTMLElement = document.createElement("label");
         labelLöschen.innerHTML = "Bestellung löschen<br>";
-        löschen.addEventListener("click", löschenklick);
+        löschen.addEventListener("click", löschenKlick);
         info.appendChild(löschen);
         info.appendChild(labelLöschen);
 
 
 
        
-        function löschenklick(_event: Event): void {
+        function löschenKlick(_event: Event): void {
             streußelBestellung.innerHTML = "<b>Streußelsorte:</b>";
             eisBestellung.innerHTML = "<b>Eissorte:</b>";
             waffelBestellung.innerHTML = "<b>Waffelsorte:</b>";
@@ -157,7 +157,7 @@ namespace endprojekt {
         for (let i: number = 0; i < eis.length; i++) {
         if (eis [i].kategorie == "waffel" ) {
         let klasse: HTMLElement = document.createElement("div");
-        klasse.setAttribute("class", "waffelartikel");
+        klasse.setAttribute("class", "waffelArtikel");
         waffelTitel.appendChild(klasse);
 
 
@@ -173,14 +173,14 @@ namespace endprojekt {
         label.innerHTML = eis[i].name + "<br>" + "<br>";
         let anzeigeBild: HTMLElement = document.createElement("img");
         anzeigeBild.setAttribute("src", eis[i].bild);
-        anzeigeBild.setAttribute("id", "anzeigebild");
+        anzeigeBild.setAttribute("id", "anzeigeBild");
         klasse.appendChild(anzeigeBild);
         klasse.appendChild(element);
         klasse.appendChild(label);
     }
        else if (eis[i].kategorie == "eis") {
         let klasse: HTMLElement = document.createElement("div");
-        klasse.setAttribute("class", "eisartikel");
+        klasse.setAttribute("class", "eisArtikel");
         eisTitel.appendChild(klasse);
 
 
@@ -194,14 +194,14 @@ namespace endprojekt {
         label.innerHTML = eis[i].name + "<br>" + "<br>";
         let anzeigeBild: HTMLElement = document.createElement("img");
         anzeigeBild.setAttribute("src", eis[i].bild);
-        anzeigeBild.setAttribute("id", "anzeigebild");
+        anzeigeBild.setAttribute("id", "anzeigeBild");
         klasse.appendChild(anzeigeBild);
         klasse.appendChild(element);
         klasse.appendChild(label);
     }
     else if (eis[i].kategorie == "streußel") {
         let klasse: HTMLElement = document.createElement("div");
-        klasse.setAttribute("class", "streußelartikel");
+        klasse.setAttribute("class", "streußelArtikel");
         streußelTitel.appendChild(klasse);
 
         let element: HTMLElement = document.createElement("INPUT");
@@ -215,7 +215,7 @@ namespace endprojekt {
         label.innerHTML = eis[i].name + "<br>" + "<br>";
         let anzeigeBild: HTMLElement = document.createElement("img");
         anzeigeBild.setAttribute("src", eis[i].bild);
-        anzeigeBild.setAttribute("id", "anzeigebild");
+        anzeigeBild.setAttribute("id", "anzeigeBild");
         klasse.appendChild(anzeigeBild);
         klasse.appendChild(element);
         klasse.appendChild(label);
@@ -305,7 +305,7 @@ namespace endprojekt {
             
             if ( j > 6 ) {
                 console.log("Maximale Anzahl an Kugeln erreicht");
-                let maximaleAnzahl: HTMLElement = <HTMLElement>document.getElementById("maximaleanzahl");
+                let maximaleAnzahl: HTMLElement = <HTMLElement>document.getElementById("maximaleAnzahl");
                 maximaleAnzahl.innerHTML = "Maximale Anzahl <br> an Kugeln erreicht!";
                 divElement.appendChild(maximaleAnzahl);
                 } else {
