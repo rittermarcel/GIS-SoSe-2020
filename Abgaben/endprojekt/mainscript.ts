@@ -130,7 +130,7 @@ namespace endprojekt {
             document.getElementById("test")?.remove(); 
             }
             zählerbestellungen ++;
-            localStorage.setItem("Eissortebestellung" + zählerbestellungen, waffellbestellung.textContent + " <br>" + eisbestellung.textContent + " <br>" + streußelbestellung.textContent + " <br>" + "Preis: " + preis + "€ ");
+            localStorage.setItem("Eissortebestellung" + zählerbestellungen, waffellbestellung.textContent + " <br>" + eisbestellung.textContent + " <br>" + streußelbestellung.textContent + " <br>" + "Preis: " + preis.toFixed(2) + "€ ");
             
             localStorage.setItem("zählerbestellungen", zählerbestellungen + "");
             

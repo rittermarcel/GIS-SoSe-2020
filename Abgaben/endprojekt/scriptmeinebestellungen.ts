@@ -69,12 +69,12 @@ function löschenklick(_event: Event): void {
     console.log(gesamttext);
     gesamtpreis = gesamtpreis - JSON.parse(<string>localStorage.getItem("zwischenpreis"));
     console.log(gesamtpreis);
-    gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis + "€";
+    gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis.toFixed(2) + "€";
     ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
     }
 }
 bestellungenform.setAttribute("value", gesamttext);
-gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis + "€";
+gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis.toFixed(2) + "€";
 
 
 document.getElementById("main")?.appendChild(divinhalt);

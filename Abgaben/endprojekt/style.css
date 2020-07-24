@@ -306,16 +306,16 @@ a{
        margin-top: -700px;
         width:150px;
         height:200px;
-        top:-700px;
-        left:-215px;
+        top:-600px;
+        left:-370px;
     }
     #streußel{
         position: relative;
         
          width:100px;
          height:100px;
-         top:-800px;
-         left:-180px;
+         top:-690px;
+         left:-350px;
          z-index: 3;
     }
     
@@ -323,16 +323,16 @@ a{
         position: relative;
         width:180px;
         height:180px;
-        top:-710px;
-        left:-230px;
+        top:-620px;
+        left:-390px;
         margin-top: -700px;
     }
     #schokokugel{
         width:100px;
         position: relative;
         margin-top: -45px;
-        left:-190px;
-        top:-810px;
+        left:-350px;
+        top:-710px;
         z-index: 2;
        
     }
@@ -354,7 +354,7 @@ a{
         width:150px;
         height:200px;
         top:-500px;
-        left:-215px;
+        left:-260px;
     }
     #streußel{
         position: relative;
@@ -362,7 +362,7 @@ a{
          width:100px;
          height:100px;
          top:-600px;
-         left:-180px;
+         left:-240px;
          z-index: 3;
     }
     
@@ -371,14 +371,14 @@ a{
         width:180px;
         height:180px;
         top:-520px;
-        left:-230px;
+        left:-280px;
         margin-top: -700px;
     }
     #schokokugel{
         width:100px;
         position: relative;
         margin-top: -45px;
-        left:-190px;
+        left:-240px;
         top:-610px;
         z-index: 2;
        

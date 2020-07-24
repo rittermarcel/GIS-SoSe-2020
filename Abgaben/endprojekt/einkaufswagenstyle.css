@@ -3,27 +3,38 @@ button{
     width:100px;
     height:20px;
 }
+#bestellen {
+    width:170px;
+    height:30px;
+}
+#bestellen:hover{
+background-color: darkred;
+
+}
 #bestellungen{
     width:300px;
     position: relative;
     top:0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .bestellungen {
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin-left: 250px;
+    margin-top: 300px;
     
 }
 #formdiv{
     position: relative;
-    top:600px;
+    top:0px;
     margin-left: 43%;
-    margin-top: 200px;
-    
+    margin-top: 50px;
 }
+
+
+
 
 #gesamtpreis{
     position: relative;
@@ -38,16 +49,25 @@ button{
 @media (max-width:  600px){ 
     #bestellungen{
         float:left;
+        margin-left: 200px;
         right:300px;
         width:500px;
         position: relative;
-        top:250px;
+        top:50px;
       
     }
-   #formdiv{
+    
+   
+    
+   #formdiv form{
        position: relative;
-       top:-1000px;
-       right:450px;
+       margin-top: 80px;
+        top:0px;
+        float:left;
+        left:-80px;
+  
+    
    }
+  
 
 }

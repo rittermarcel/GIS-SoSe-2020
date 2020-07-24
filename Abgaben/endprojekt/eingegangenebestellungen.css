@@ -23,11 +23,28 @@
     height:60px;
 }
 @media (max-width:  600px){ 
-    #einsehen{
-        position: relative;
-        top:250px;
-        left:20%;
-        float:left;
+   
+    .buttons {
+        left: 20%;
+       
+    }
+    .buttons button {
+        margin-top:30px;
+        width:300px;
+        height:60px;
+    }
+
+
+}
+@media (min-width:600px) and (max-width:1700px){
+
+    .buttons {
+        left: 35%;
+       
+    }
+    .buttons button {
+      
+        margin-top:30px;
         width:300px;
         height:60px;
     }

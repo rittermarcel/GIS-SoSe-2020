@@ -45,12 +45,12 @@ var endprojekt;
             console.log(gesamttext);
             gesamtpreis = gesamtpreis - JSON.parse(localStorage.getItem("zwischenpreis"));
             console.log(gesamtpreis);
-            gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis + "€";
+            gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis.toFixed(2) + "€";
             (_event.currentTarget.parentElement).remove();
         }
     }
     bestellungenform.setAttribute("value", gesamttext);
-    gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis + "€";
+    gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis.toFixed(2) + "€";
     document.getElementById("main")?.appendChild(divinhalt);
 })(endprojekt || (endprojekt = {}));
 //# sourceMappingURL=scriptmeinebestellungen.js.map
