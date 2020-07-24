@@ -12,9 +12,9 @@ namespace endprojekt {
     async function buttonclickholen(): Promise<void> {
       
        
-        //let url: string = "https://gissommersemester2020.herokuapp.com";
+        let url: string = "https://gissommersemester2020.herokuapp.com";
         
-        let url: string = "http://localhost:8100";
+        //let url: string = "http://localhost:8100";
         url = url + "/holen";
         
         let response: Response = await fetch(url);

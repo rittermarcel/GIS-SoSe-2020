@@ -7,8 +7,8 @@ const Mongo = require("mongodb");
 var endprojekt;
 (function (endprojekt) {
     let bestellungen;
-    // let databaseUrl: string = "mongodb+srv://gisuser2020:dv1Y6ayeEBvevpAf@marcelgis.1jm82.mongodb.net/Eisdiele?retryWrites=true&w=majority";
-    let databaseUrl = "mongodb://localhost: 27017";
+    let databaseUrl = "mongodb+srv://gisuser2020:dv1Y6ayeEBvevpAf@marcelgis.1jm82.mongodb.net/Eisdiele?retryWrites=true&w=majority";
+    // let databaseUrl: string = "mongodb://localhost: 27017";
     //mongodb+srv://gisuser2020:<password>@marcelgis.1jm82.mongodb.net/<dbname>?retryWrites=true&w=majority
     console.log("Starting server");
     //Port Number wird unter port gespeichert
