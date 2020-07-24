@@ -97,7 +97,7 @@ var endprojekt;
                 document.getElementById("test")?.remove();
             }
             zählerBestellungen++;
-            localStorage.setItem("Eissortebestellung" + zählerBestellungen, waffelBestellung.textContent + " <br>" + eisBestellung.textContent + " <br>" + streußelBestellung.textContent + " <br>" + "Preis: " + preis.toFixed(2) + "€ ");
+            localStorage.setItem("Eissortebestellung" + zählerBestellungen, waffelBestellung.textContent + ", <br>" + eisBestellung.textContent + " <br>" + streußelBestellung.textContent + " <br>" + "Preis: " + preis.toFixed(2) + "€ ");
             localStorage.setItem("zählerbestellungen", zählerBestellungen + "");
             counterHtml.innerHTML = zählerBestellungen + "";
             j = 0;
