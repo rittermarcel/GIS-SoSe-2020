@@ -51,6 +51,8 @@ export namespace endprojekt {
           } else if (pfad == "/holen") {
             
             _response.write(JSON.stringify(await bestellungen.find().toArray()));
+          } else if (pfad == "/clear") {
+            bestellungen.drop();
           }
         }
     

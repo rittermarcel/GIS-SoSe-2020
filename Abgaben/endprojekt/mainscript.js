@@ -6,6 +6,7 @@ var endprojekt;
         let text = "";
         let preis = 0;
         let klickcounterwaffel = 0;
+        let klickcountereis = 0;
         let klickcounterstreußel = 0;
         let zählerbestellungen = 0;
         let counterhtml = document.getElementById("counter");
@@ -110,6 +111,7 @@ var endprojekt;
             preis = 0;
             preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
             console.log(localStorage);
+            klickcountereis++;
         }
         for (let i = 0; i < endprojekt.eis.length; i++) {
             if (endprojekt.eis[i].kategorie == "waffel") {
@@ -125,6 +127,10 @@ var endprojekt;
                 let label = document.createElement("label");
                 label.setAttribute("for", endprojekt.eis[i].name);
                 label.innerHTML = endprojekt.eis[i].name + "<br>" + "<br>";
+                let anzeigebild = document.createElement("img");
+                anzeigebild.setAttribute("src", endprojekt.eis[i].bild);
+                anzeigebild.setAttribute("id", "anzeigebild");
+                klasse.appendChild(anzeigebild);
                 klasse.appendChild(element);
                 klasse.appendChild(label);
             }
@@ -138,6 +144,10 @@ var endprojekt;
                 let label = document.createElement("label");
                 label.setAttribute("for", endprojekt.eis[i].name);
                 label.innerHTML = endprojekt.eis[i].name + "<br>" + "<br>";
+                let anzeigebild = document.createElement("img");
+                anzeigebild.setAttribute("src", endprojekt.eis[i].bild);
+                anzeigebild.setAttribute("id", "anzeigebild");
+                klasse.appendChild(anzeigebild);
                 klasse.appendChild(element);
                 klasse.appendChild(label);
             }
@@ -154,6 +164,10 @@ var endprojekt;
                 let label = document.createElement("label");
                 label.setAttribute("for", endprojekt.eis[i].name);
                 label.innerHTML = endprojekt.eis[i].name + "<br>" + "<br>";
+                let anzeigebild = document.createElement("img");
+                anzeigebild.setAttribute("src", endprojekt.eis[i].bild);
+                anzeigebild.setAttribute("id", "anzeigebild");
+                klasse.appendChild(anzeigebild);
                 klasse.appendChild(element);
                 klasse.appendChild(label);
             }
@@ -178,46 +192,57 @@ var endprojekt;
                 preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
             }
             function streußelklick(_event) {
-                let klasse = document.createElement("div");
-                klasse.setAttribute("id", "test");
-                eisbild.appendChild(klasse);
-                if (klickcounterstreußel < 1) {
-                    let bild = document.createElement("img");
-                    bild.setAttribute("src", endprojekt.eis[i].bild);
-                    bild.setAttribute("id", "streußel");
-                    bild.setAttribute("div", "");
-                    klasse.appendChild(bild);
-                    localStorage.setItem("streußelsorte", endprojekt.eis[i].name);
-                    streußelbestellung.innerHTML = "<b>Streußelsorte:</b> 1X" + endprojekt.eis[i].name;
-                    preis = preis + endprojekt.eis[i].preis;
-                    klickcounterstreußel++;
-                }
-                else if (klickcounterstreußel > 1) {
-                    preis = preis - endprojekt.eis[i].preis;
-                }
-                preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
-            }
-            function eisklick(_event) {
-                let bild = document.createElement("img");
-                bild.setAttribute("src", endprojekt.eis[i].bild);
-                bild.setAttribute("id", "schokokugel");
-                bild.setAttribute("div", "");
-                localStorage.setItem("eissorte" + j, endprojekt.eis[i].name);
-                if (j > 6) {
-                    console.log("Maximale Anzahl an Kugeln erreicht");
-                    let maximaleanzahl = document.getElementById("maximaleanzahl");
-                    maximaleanzahl.innerHTML = "Maximale Anzahl <br> an Kugeln erreicht!";
-                    divElement.appendChild(maximaleanzahl);
+                if (klickcountereis > 0) {
+                    let klasse = document.createElement("div");
+                    klasse.setAttribute("id", "test");
+                    eisbild.appendChild(klasse);
+                    if (klickcounterstreußel < 1) {
+                        let bild = document.createElement("img");
+                        bild.setAttribute("src", endprojekt.eis[i].bild);
+                        bild.setAttribute("id", "streußel");
+                        bild.setAttribute("div", "");
+                        klasse.appendChild(bild);
+                        localStorage.setItem("streußelsorte", endprojekt.eis[i].name);
+                        streußelbestellung.innerHTML = "<b>Streußelsorte:</b> 1X" + endprojekt.eis[i].name;
+                        preis = preis + endprojekt.eis[i].preis;
+                        klickcounterstreußel++;
+                    }
+                    else if (klickcounterstreußel > 1) {
+                        preis = preis - endprojekt.eis[i].preis;
+                    }
+                    preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
                 }
                 else {
-                    eisbild.appendChild(bild);
-                    text = text + "1X" + endprojekt.eis[i].name + ", ";
-                    eisbestellung.innerHTML = "<b>Eissorte:</b> " + text;
-                    preis = preis + endprojekt.eis[i].preis;
-                    preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
-                    console.log(preis + " €");
-                    j++;
-                    console.log(text);
+                    console.log("zuerst Eiskugel auswählen");
+                }
+            }
+            function eisklick(_event) {
+                if (klickcounterwaffel > 0 && klickcounterstreußel < 1) {
+                    let bild = document.createElement("img");
+                    bild.setAttribute("src", endprojekt.eis[i].bild);
+                    bild.setAttribute("id", "schokokugel");
+                    bild.setAttribute("div", "");
+                    localStorage.setItem("eissorte" + j, endprojekt.eis[i].name);
+                    if (j > 6) {
+                        console.log("Maximale Anzahl an Kugeln erreicht");
+                        let maximaleanzahl = document.getElementById("maximaleanzahl");
+                        maximaleanzahl.innerHTML = "Maximale Anzahl <br> an Kugeln erreicht!";
+                        divElement.appendChild(maximaleanzahl);
+                    }
+                    else {
+                        eisbild.appendChild(bild);
+                        text = text + "1X" + endprojekt.eis[i].name + ", ";
+                        eisbestellung.innerHTML = "<b>Eissorte:</b> " + text;
+                        preis = preis + endprojekt.eis[i].preis;
+                        preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
+                        console.log(preis + " €");
+                        j++;
+                        console.log(text);
+                    }
+                    klickcountereis++;
+                }
+                else {
+                    console.log("Zuerst Waffel auswählen!");
                 }
             }
         }

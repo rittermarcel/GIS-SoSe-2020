@@ -27,6 +27,7 @@ async function buttonclickbestellen(): Promise<void> {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/bestellen" + "?" + query.toString();
         await fetch(url);
+        
         serverantwort.innerHTML = "Bestellt! Vielen Dank :)";
     }
 

@@ -1,17 +1,26 @@
-#einsehen{
+
+#text{
+    position: relative;
+    top:300px;
+    margin-top: 300px;
+    
+}
+
+.buttons{
     position: relative;
     top:250px;
     left:40%;
     float:left;
-    width:300px;
-    height:60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     
 }
-#text{
-    position: relative;
-    top:300px;
-    margin-top: 100px;
-    
+
+.buttons button {
+    margin-top:30px;
+    width:300px;
+    height:60px;
 }
 @media (max-width:  600px){ 
     #einsehen{

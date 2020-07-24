@@ -6,6 +6,7 @@ namespace endprojekt {
         
        
         let klickcounterwaffel: number = 0;
+        let klickcountereis: number = 0;
         let klickcounterstreußel: number = 0;
         let zählerbestellungen: number = 0;
         let counterhtml: HTMLElement = <HTMLElement>document.getElementById("counter");
@@ -14,6 +15,7 @@ namespace endprojekt {
         let eisbestellung: HTMLElement = <HTMLElement>document.getElementById("eissortebestellt");
         let waffellbestellung: HTMLElement = <HTMLElement>document.getElementById("waffelsortebestellt");
         let startlink: HTMLElement = <HTMLElement>document.getElementById("startlink");
+      
         startlink.addEventListener("click", startklick);
         localStorage.setItem("zählerbestellungen", 0 + "");
         
@@ -54,6 +56,8 @@ namespace endprojekt {
 
         let eisbild: HTMLElement = document.getElementById("eisbild") as HTMLDivElement;
         divinhalt.appendChild(eisbild);
+
+       
 
         let waffeltitel: HTMLElement = document.createElement("p");
         waffeltitel.setAttribute("id", "waffeltitel");
@@ -146,7 +150,7 @@ namespace endprojekt {
             preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
             console.log(localStorage);
             
-        
+            klickcountereis++;
         }
 
 
@@ -167,6 +171,10 @@ namespace endprojekt {
         let label: HTMLElement = document.createElement("label");
         label.setAttribute("for", eis[i].name);
         label.innerHTML = eis[i].name + "<br>" + "<br>";
+        let anzeigebild: HTMLElement = document.createElement("img");
+        anzeigebild.setAttribute("src", eis[i].bild);
+        anzeigebild.setAttribute("id", "anzeigebild");
+        klasse.appendChild(anzeigebild);
         klasse.appendChild(element);
         klasse.appendChild(label);
     }
@@ -184,6 +192,10 @@ namespace endprojekt {
         let label: HTMLElement = document.createElement("label");
         label.setAttribute("for", eis[i].name);
         label.innerHTML = eis[i].name + "<br>" + "<br>";
+        let anzeigebild: HTMLElement = document.createElement("img");
+        anzeigebild.setAttribute("src", eis[i].bild);
+        anzeigebild.setAttribute("id", "anzeigebild");
+        klasse.appendChild(anzeigebild);
         klasse.appendChild(element);
         klasse.appendChild(label);
     }
@@ -201,6 +213,10 @@ namespace endprojekt {
         let label: HTMLElement = document.createElement("label");
         label.setAttribute("for", eis[i].name);
         label.innerHTML = eis[i].name + "<br>" + "<br>";
+        let anzeigebild: HTMLElement = document.createElement("img");
+        anzeigebild.setAttribute("src", eis[i].bild);
+        anzeigebild.setAttribute("id", "anzeigebild");
+        klasse.appendChild(anzeigebild);
         klasse.appendChild(element);
         klasse.appendChild(label);
 
@@ -251,10 +267,8 @@ namespace endprojekt {
         }
 
 
-
-
-
         function streußelklick(_event: Event): void {
+        if (klickcountereis > 0) {
         let klasse: HTMLElement = document.createElement("div");
         klasse.setAttribute("id", "test");
         eisbild.appendChild(klasse);
@@ -275,9 +289,14 @@ namespace endprojekt {
         }
         preishtml.innerHTML = "<b>Preis: </b>" + preis + "€";
         
+   
 
-}
+        } else {
+        console.log("zuerst Eiskugel auswählen");
+        }
+    }
         function eisklick(_event: Event): void {
+            if (klickcounterwaffel > 0 && klickcounterstreußel < 1) {
             let bild: HTMLElement = document.createElement("img");
             bild.setAttribute("src", eis[i].bild);
             bild.setAttribute("id", "schokokugel");
@@ -309,10 +328,13 @@ namespace endprojekt {
             j++;
             console.log(text);
         }
+            klickcountereis++;
             
 }
-        
-        
+ else {
+    console.log("Zuerst Waffel auswählen!");
+} 
+}     
         
 }
        
