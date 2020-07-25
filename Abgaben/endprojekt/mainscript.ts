@@ -174,6 +174,7 @@ namespace endprojekt {
         let anzeigeBild: HTMLElement = document.createElement("img");
         anzeigeBild.setAttribute("src", eis[i].bild);
         anzeigeBild.setAttribute("id", "anzeigeBild");
+        
         klasse.appendChild(anzeigeBild);
         klasse.appendChild(element);
         klasse.appendChild(label);
@@ -195,6 +196,7 @@ namespace endprojekt {
         let anzeigeBild: HTMLElement = document.createElement("img");
         anzeigeBild.setAttribute("src", eis[i].bild);
         anzeigeBild.setAttribute("id", "anzeigeBild");
+       
         klasse.appendChild(anzeigeBild);
         klasse.appendChild(element);
         klasse.appendChild(label);
@@ -235,7 +237,7 @@ namespace endprojekt {
         let bild: HTMLElement = document.createElement("img");
         
         
-       
+        
 
         
         bild.setAttribute("src", eis[i].bild);

@@ -12,6 +12,15 @@ button{
 background-color: darkred;
 
 }
+.anzeigebild{
+    width:100px;
+    height:100px;
+}
+#anzeigebilddiv {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 #bestellungen{
     width:300px;
     position: relative;

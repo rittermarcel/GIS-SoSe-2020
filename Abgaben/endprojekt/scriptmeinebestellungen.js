@@ -2,55 +2,59 @@
 var endprojekt;
 (function (endprojekt) {
     let zähler = parseInt(localStorage.getItem("zählerbestellungen"));
-    let gesamtpreis = 0;
-    let gesamtpreishtml = document.getElementById("gesamtPreis");
-    let bestellungenform = document.getElementById("bestellungenform");
-    bestellungenform.hidden = true;
-    let gesamttext = "";
-    let serverantwort = document.getElementById("serverAntwort");
+    let gesamtPreis = 0;
+    let gesamtPreisHtml = document.getElementById("gesamtPreis");
+    let bestellungenForm = document.getElementById("bestellungenForm");
+    bestellungenForm.hidden = true;
+    let lieferStatusForm = document.getElementById("lieferstatusForm");
+    lieferStatusForm.hidden = true;
+    lieferStatusForm.setAttribute("value", "Ausstehend");
+    lieferStatusForm.innerHTML = "Ausstehend";
+    let gesamtText = "";
+    let serverAntwort = document.getElementById("serverAntwort");
     let formData;
-    let buttonbestellen = document.getElementById("bestellen");
-    buttonbestellen.addEventListener("click", buttonclickbestellen);
-    async function buttonclickbestellen() {
+    let buttonBestellen = document.getElementById("bestellen");
+    buttonBestellen.addEventListener("click", buttonClickBestellen);
+    async function buttonClickBestellen() {
         formData = new FormData(document.forms[0]);
-        // let url: string = "http://localhost:8100";
-        let url = "https://gissommersemester2020.herokuapp.com";
+        let url = "http://localhost:8100";
+        // let url: string = "https://gissommersemester2020.herokuapp.com";
         let query = new URLSearchParams(formData);
         url = url + "/bestellen" + "?" + query.toString();
         await fetch(url);
-        serverantwort.innerHTML = "Bestellt! Vielen Dank :)";
+        serverAntwort.innerHTML = "Bestellt! Vielen Dank :)";
     }
-    let divinhalt = document.createElement("div");
-    divinhalt.setAttribute("class", "bestellungen");
+    let divInhalt = document.createElement("div");
+    divInhalt.setAttribute("class", "bestellungen");
     for (let i = 1; i <= zähler; i++) {
         console.log(localStorage.getItem("gesamtpreis" + i));
-        gesamtpreis = gesamtpreis + JSON.parse(localStorage.getItem("gesamtpreis" + i));
+        gesamtPreis = gesamtPreis + JSON.parse(localStorage.getItem("gesamtpreis" + i));
         let info = document.createElement("p");
         info.setAttribute("id", "bestellungen");
         let text = localStorage.getItem("Eissortebestellung" + i);
         info.innerHTML = "<b>" + i + " Bestellung: <br><br>" + "</b>" + text + "<br><br>";
-        gesamttext = gesamttext + info.textContent;
+        gesamtText = gesamtText + info.textContent;
         let texts = info.textContent + "";
         let löschen = document.createElement("Button");
         löschen.addEventListener("click", löschenklick);
         löschen.innerHTML = "Löschen";
-        divinhalt.appendChild(info);
+        divInhalt.appendChild(info);
         info.appendChild(löschen);
         function löschenklick(_event) {
             zähler--;
             localStorage.setItem("zwischenpreis", JSON.parse(localStorage.getItem("gesamtpreis" + i)));
             console.log(texts);
-            gesamttext = gesamttext.replace(texts, "");
-            bestellungenform.setAttribute("value", gesamttext);
-            console.log(gesamttext);
-            gesamtpreis = gesamtpreis - JSON.parse(localStorage.getItem("zwischenpreis"));
-            console.log(gesamtpreis);
-            gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis.toFixed(2) + "€";
+            gesamtText = gesamtText.replace(texts, "");
+            bestellungenForm.setAttribute("value", gesamtText);
+            console.log(gesamtText);
+            gesamtPreis = gesamtPreis - JSON.parse(localStorage.getItem("zwischenpreis"));
+            console.log(gesamtPreis);
+            gesamtPreisHtml.innerHTML = "Gesamtsumme: " + gesamtPreis.toFixed(2) + "€";
             (_event.currentTarget.parentElement).remove();
         }
     }
-    bestellungenform.setAttribute("value", gesamttext);
-    gesamtpreishtml.innerHTML = "Gesamtsumme: " + gesamtpreis.toFixed(2) + "€";
-    document.getElementById("main")?.appendChild(divinhalt);
+    bestellungenForm.setAttribute("value", gesamtText);
+    gesamtPreisHtml.innerHTML = "Gesamtsumme: " + gesamtPreis.toFixed(2) + "€";
+    document.getElementById("main")?.appendChild(divInhalt);
 })(endprojekt || (endprojekt = {}));
 //# sourceMappingURL=scriptmeinebestellungen.js.map

@@ -4,8 +4,8 @@ import * as Mongo from "mongodb";
 export namespace endprojekt {
 
       let bestellungen: Mongo.Collection;
-      let databaseUrl: string = "mongodb+srv://gisuser2020:dv1Y6ayeEBvevpAf@marcelgis.1jm82.mongodb.net/Eisdiele?retryWrites=true&w=majority";
-     // let databaseUrl: string = "mongodb://localhost: 27017";
+     // let databaseUrl: string = "mongodb+srv://gisuser2020:dv1Y6ayeEBvevpAf@marcelgis.1jm82.mongodb.net/Eisdiele?retryWrites=true&w=majority";
+      let databaseUrl: string = "mongodb://localhost: 27017";
 //mongodb+srv://gisuser2020:<password>@marcelgis.1jm82.mongodb.net/<dbname>?retryWrites=true&w=majority
       console.log("Starting server");
       //Port Number wird unter port gespeichert
@@ -49,8 +49,9 @@ export namespace endprojekt {
           if (pfad == "/bestellen") {
           bestellungen.insertOne(url.query);
           } else if (pfad == "/holen") {
-            
             _response.write(JSON.stringify(await bestellungen.find().toArray()));
+          } else if (pfad == "/statuswechsel") {
+            bestellungen.updateOne({lieferstatus: "Ausstehend"}, {$set: {lieferstatus: "Versendet"}});
           } else if (pfad == "/clear") {
             bestellungen.drop();
           }
