@@ -23,7 +23,8 @@ background-color: darkred;
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 250px;
+    margin-left: 180px;
+    
     margin-top: 300px;
     
 }
@@ -57,6 +58,7 @@ background-color: darkred;
         top:50px;
       
     }
+    
     
    
     

@@ -6,7 +6,9 @@ var endprojekt;
         let text = "";
         let preis = 0;
         let klickCounterWaffel = 0;
-        let klickCounterEis = 0;
+        let klickCounterEis;
+        klickCounterEis = 0;
+        let klickCounterEisKugel = 0;
         let klickCounterStreußel = 0;
         let zählerBestellungen = 0;
         let counterHtml = document.getElementById("counter");
@@ -83,6 +85,7 @@ var endprojekt;
             preis = 0;
             klickCounterWaffel = 0;
             klickCounterStreußel = 0;
+            klickCounterEisKugel = 0;
             for (let i = 0; i < 7; i++) {
                 document.getElementById("kugel")?.remove();
                 document.getElementById("streußel")?.remove();
@@ -104,6 +107,7 @@ var endprojekt;
             text = "";
             klickCounterWaffel = 0;
             klickCounterStreußel = 0;
+            klickCounterEisKugel = 0;
             streußelBestellung.innerHTML = "<b>Streußelsorte:</b>";
             eisBestellung.innerHTML = "<b>Eissorte:</b>";
             waffelBestellung.innerHTML = "<b>Waffelsorte:</b>";
@@ -192,7 +196,7 @@ var endprojekt;
                 preisHtml.innerHTML = "<b>Preis: </b>" + preis + "€";
             }
             function streußelKlick(_event) {
-                if (klickCounterEis > 0) {
+                if (klickCounterEisKugel > 0) {
                     let klasse = document.createElement("div");
                     klasse.setAttribute("id", "test");
                     eisBild.appendChild(klasse);
@@ -240,6 +244,7 @@ var endprojekt;
                         console.log(text);
                     }
                     klickCounterEis++;
+                    klickCounterEisKugel++;
                 }
                 else {
                     console.log("Zuerst Waffel auswählen!");

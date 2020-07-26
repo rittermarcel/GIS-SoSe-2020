@@ -6,7 +6,9 @@ namespace endprojekt {
         
        
         let klickCounterWaffel: number = 0;
-        let klickCounterEis: number = 0;
+        let klickCounterEis: number;
+        klickCounterEis = 0;
+        let klickCounterEisKugel: number = 0;
         let klickCounterStreußel: number = 0;
         let zählerBestellungen: number = 0;
         let counterHtml: HTMLElement = <HTMLElement>document.getElementById("counter");
@@ -111,6 +113,7 @@ namespace endprojekt {
             preis = 0;
             klickCounterWaffel = 0;
             klickCounterStreußel = 0;
+            klickCounterEisKugel = 0;
           
             for (let i: number = 0; i < 7; i++) {
                 document.getElementById("kugel")?.remove(); 
@@ -141,6 +144,8 @@ namespace endprojekt {
             
             klickCounterWaffel = 0;
             klickCounterStreußel = 0;
+            klickCounterEisKugel = 0;
+            
             streußelBestellung.innerHTML = "<b>Streußelsorte:</b>";
             eisBestellung.innerHTML = "<b>Eissorte:</b>";
             waffelBestellung.innerHTML = "<b>Waffelsorte:</b>";
@@ -265,7 +270,7 @@ namespace endprojekt {
 
 
         function streußelKlick(_event: Event): void {
-        if (klickCounterEis > 0) {
+        if (klickCounterEisKugel > 0) {
         let klasse: HTMLElement = document.createElement("div");
         klasse.setAttribute("id", "test");
         eisBild.appendChild(klasse);
@@ -327,7 +332,7 @@ namespace endprojekt {
             console.log(text);
         }
             klickCounterEis++;
-            
+            klickCounterEisKugel++;
 }
  else {
     console.log("Zuerst Waffel auswählen!");
