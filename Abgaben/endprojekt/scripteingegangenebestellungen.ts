@@ -15,8 +15,8 @@ namespace endprojekt {
     
    
     async function buttonclickholen(): Promise<void> {
-         // let url: string = "https://gissommersemester2020.herokuapp.com";
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gissommersemester2020.herokuapp.com";
+        //let url: string = "http://localhost:8100";
         url = url + "/holen";
         
         let response: Response = await fetch(url);
@@ -26,8 +26,8 @@ namespace endprojekt {
         
     }
     async function statusWechselKlick(): Promise<void> {
-        // let url: string = "https://gissommersemester2020.herokuapp.com";
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gissommersemester2020.herokuapp.com";
+        //let url: string = "http://localhost:8100";
        
         url = url + "/statuswechsel";
         
@@ -41,8 +41,8 @@ namespace endprojekt {
 
 
     async function buttonclicklöschen(): Promise<void> {
-       // let url: string = "https://gissommersemester2020.herokuapp.com";
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gissommersemester2020.herokuapp.com";
+        //let url: string = "http://localhost:8100";
         url = url + "/clear";
         
         await fetch(url);

@@ -17,8 +17,8 @@ var endprojekt;
     buttonBestellen.addEventListener("click", buttonClickBestellen);
     async function buttonClickBestellen() {
         formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
-        // let url: string = "https://gissommersemester2020.herokuapp.com";
+        //let url: string = "http://localhost:8100";
+        let url = "https://gissommersemester2020.herokuapp.com";
         let query = new URLSearchParams(formData);
         url = url + "/bestellen" + "?" + query.toString();
         await fetch(url);
