@@ -3,11 +3,8 @@ namespace endprojekt {
         let j: number = 1;
         let text: string = "";
         let preis: number = 0;
-        
-       
         let klickCounterWaffel: number = 0;
-        let klickCounterEis: number;
-        klickCounterEis = 0;
+        let klickCounterEis: number = 0;
         let klickCounterEisKugel: number = 0;
         let klickCounterStreußel: number = 0;
         let zählerBestellungen: number = 0;
@@ -20,6 +17,7 @@ namespace endprojekt {
       
         startLink.addEventListener("click", startKlick);
         localStorage.setItem("zählerbestellungen", 0 + "");
+        klickCounterEis = 0;
         
         function startKlick(_event: Event): void {
             window.location.href = "#eisErstellenTitel";
@@ -100,9 +98,6 @@ namespace endprojekt {
         info.appendChild(löschen);
         info.appendChild(labelLöschen);
 
-
-
-       
         function löschenKlick(_event: Event): void {
             streußelBestellung.innerHTML = "<b>Streußelsorte:</b>";
             eisBestellung.innerHTML = "<b>Eissorte:</b>";
@@ -228,10 +223,6 @@ namespace endprojekt {
         klasse.appendChild(label);
 
     }
-       
-
-
-
         function waffelKlick(_event: Event): void {
 
         if (klickCounterWaffel < 1) {
@@ -244,30 +235,21 @@ namespace endprojekt {
         bild.setAttribute("id", eis[i].kategorie2);
         localStorage.setItem("waffelsorte", eis[i].name);
         klasse.appendChild(bild);
-      
-       
-
-
         preis = preis + eis[i].preis;
-        
-        
-       
+
         waffelBestellung.innerHTML = "<b>Waffelsorte:</b> 1X" + eis[i].name;
-        
-        
+
         klickCounterWaffel++;
         } else if (klickCounterWaffel > 1) {
         
         //document.getElementById("test")?.remove(); 
-       
-           
+
         preis = preis - eis[i].preis;
             
         }
         preisHtml.innerHTML = "<b>Preis: </b>" + preis + "€";
 
         }
-
 
         function streußelKlick(_event: Event): void {
         if (klickCounterEisKugel > 0) {
@@ -291,8 +273,6 @@ namespace endprojekt {
         }
         preisHtml.innerHTML = "<b>Preis: </b>" + preis + "€";
         
-   
-
         } else {
         console.log("zuerst Eiskugel auswählen");
         }
@@ -314,20 +294,13 @@ namespace endprojekt {
                 } else {
             
             eisBild.appendChild(bild);
-                        
-                    
-           
-                    
+      
             text = text + "1X" + eis[i].name + ", ";
             eisBestellung.innerHTML = "<b>Eissorte:</b> " + text;
             preis = preis + eis[i].preis;
             
             preisHtml.innerHTML = "<b>Preis: </b>" + preis + "€";
             console.log(preis + " €");
-
-
-            
-
             j++;
             console.log(text);
         }
@@ -337,15 +310,8 @@ namespace endprojekt {
  else {
     console.log("Zuerst Waffel auswählen!");
 } 
-}     
-        
-}
-       
-
-
+}           
+}   
         document.getElementById("main")?.appendChild(divInhalt);
     }
-
-    
-
     }

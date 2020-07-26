@@ -6,8 +6,7 @@ var endprojekt;
         let text = "";
         let preis = 0;
         let klickCounterWaffel = 0;
-        let klickCounterEis;
-        klickCounterEis = 0;
+        let klickCounterEis = 0;
         let klickCounterEisKugel = 0;
         let klickCounterStreußel = 0;
         let zählerBestellungen = 0;
@@ -19,6 +18,7 @@ var endprojekt;
         let startLink = document.getElementById("startlink");
         startLink.addEventListener("click", startKlick);
         localStorage.setItem("zählerbestellungen", 0 + "");
+        klickCounterEis = 0;
         function startKlick(_event) {
             window.location.href = "#eisErstellenTitel";
         }

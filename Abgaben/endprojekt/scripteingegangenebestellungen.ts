@@ -12,7 +12,6 @@ namespace endprojekt {
 
     let htmltext: HTMLElement = <HTMLElement>document.getElementById("text");
     
-    
    
     async function buttonclickholen(): Promise<void> {
         let url: string = "https://gissommersemester2020.herokuapp.com";
@@ -34,11 +33,6 @@ namespace endprojekt {
         await fetch(url);
          
      }
-
-
-
-
-
 
     async function buttonclicklöschen(): Promise<void> {
         let url: string = "https://gissommersemester2020.herokuapp.com";

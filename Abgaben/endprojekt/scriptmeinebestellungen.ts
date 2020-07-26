@@ -15,17 +15,13 @@ let gesamtText: string = "";
 let serverAntwort: HTMLElement = <HTMLElement>document.getElementById("serverAntwort");
 
 
-
-
 let formData: FormData;
 
 
 let buttonBestellen: HTMLButtonElement = <HTMLButtonElement>document.getElementById("bestellen");
 buttonBestellen.addEventListener("click", buttonClickBestellen);
 
-    
-
-
+   
 async function buttonClickBestellen(): Promise<void> {
         
         formData = new FormData(document.forms[0]);
