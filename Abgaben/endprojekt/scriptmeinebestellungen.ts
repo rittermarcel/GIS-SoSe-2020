@@ -5,6 +5,7 @@ let gesamtPreisHtml: HTMLElement = <HTMLElement>document.getElementById("gesamtP
 let bestellungenForm: HTMLElement = <HTMLElement>document.getElementById("bestellungenForm");
 bestellungenForm.hidden = true;
 
+
 let lieferStatusForm: HTMLElement = <HTMLElement>document.getElementById("lieferstatusForm");
 lieferStatusForm.hidden = true;
 lieferStatusForm.setAttribute("value", "Ausstehend");
@@ -49,6 +50,7 @@ for (let i: number = 1; i <= zähler; i++) {
 
 console.log(localStorage.getItem("gesamtpreis" + i));
 gesamtPreis = gesamtPreis + JSON.parse(<string>localStorage.getItem("gesamtpreis" + i));
+
 
 let info: HTMLElement = document.createElement("p");
 info.setAttribute("id", "bestellungen");

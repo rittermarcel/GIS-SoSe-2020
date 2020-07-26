@@ -235,11 +235,6 @@ namespace endprojekt {
         eisBild.appendChild(klasse);
 
         let bild: HTMLElement = document.createElement("img");
-        
-        
-        
-
-        
         bild.setAttribute("src", eis[i].bild);
         bild.setAttribute("id", eis[i].kategorie2);
         localStorage.setItem("waffelsorte", eis[i].name);
@@ -304,6 +299,7 @@ namespace endprojekt {
             bild.setAttribute("id", "kugel");
             bild.setAttribute("div", "");
             localStorage.setItem("eissorte" + j, eis[i].name);
+
             
             if ( j > 6 ) {
                 console.log("Maximale Anzahl an Kugeln erreicht");
