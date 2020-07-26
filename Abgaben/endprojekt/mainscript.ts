@@ -31,13 +31,13 @@ namespace endprojekt {
         titelHtml.innerHTML = maintext[0].titel;
 
         let hausgemachtHtml: HTMLElement = <HTMLElement>document.getElementById("hausgemachtBeschreibung");
-        hausgemachtHtml.innerHTML = maintext[0].hausgemachtbeschreibung;
+        hausgemachtHtml.innerHTML = maintext[0].hausgemachtBeschreibung;
 
         let taeglichFrischHtml: HTMLElement = <HTMLElement>document.getElementById("taeglichFrischBeschreibung");
-        taeglichFrischHtml.innerHTML = maintext[0].taeglichfrischbeschreibung;
+        taeglichFrischHtml.innerHTML = maintext[0].taeglichfrischBeschreibung;
 
         let umweltschonendHtml: HTMLElement = <HTMLElement>document.getElementById("umweltschonendBeschreibung");
-        umweltschonendHtml.innerHTML = maintext[0].umweltschonendbeschreibung;
+        umweltschonendHtml.innerHTML = maintext[0].umweltschonendBeschreibung;
 
 
         let divInhalt: HTMLElement = document.createElement("div");

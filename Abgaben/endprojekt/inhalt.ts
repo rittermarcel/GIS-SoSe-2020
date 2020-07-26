@@ -3,9 +3,9 @@ namespace endprojekt {
     export interface Maintext {
         titel: string;
         beschreibung1: string;
-        hausgemachtbeschreibung: string;
-        taeglichfrischbeschreibung: string;
-        umweltschonendbeschreibung: string;
+        hausgemachtBeschreibung: string;
+        taeglichfrischBeschreibung: string;
+        umweltschonendBeschreibung: string;
     }
     export interface Eis {
         name: string;
