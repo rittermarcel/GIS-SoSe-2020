@@ -47,7 +47,7 @@ var endprojekt;
                 _response.write(JSON.stringify(await bestellungen.find().toArray()));
             }
             else if (pfad == "/statuswechsel") {
-                bestellungen.updateOne({ lieferstatus: "Ausstehend" }, { $set: { lieferstatus: "Versendet" } });
+                bestellungen.updateOne({ Lieferstatus: "Ausstehend" }, { $set: { Lieferstatus: "Versendet" } });
             }
             else if (pfad == "/clear") {
                 bestellungen.drop();
