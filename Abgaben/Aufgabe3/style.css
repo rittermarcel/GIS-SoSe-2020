@@ -1,0 +1,164 @@
+
+body {
+    margin: 0px;
+    background-image: url(bg.png);
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    text-align: center;
+  
+}
+
+.navbar{
+    background-color: darkolivegreen;
+    width:100%;
+    height:150px;
+    border-radius: 20px;
+    padding: 10px;
+    border:none;
+    margin: 0px;
+}
+
+
+.navbar .aktiv {
+    color:red;
+}
+
+nav{
+    background-color: #000;
+    width: 240px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0px;
+    margin-left: 550px;
+    z-index: 1;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.navbar a:hover{
+    color: red;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.uberschrift h1{
+    margin: -130px;
+    color: white;
+}
+
+.uberschrift h2{
+    margin: 140px;
+    color: white;
+}
+
+.instagramlogo img{
+position: absolute;
+top:125px;
+margin-left: -15px;
+    
+
+}
+.gruesse{
+    color: black;
+}
+
+.instagramlogo img:hover{
+    height: 45px;
+    width:45px;
+    position: absolute;
+    top:120px;
+    margin-left: -20px;
+}
+h1{
+    color:darkolivegreen;
+    margin-top: 160px;
+}
+h2{
+    color:darkolivegreen;
+}
+#gif{
+    margin-top: 50px;
+}
+
+#Anker a{
+    text-decoration: none;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    padding:4px;
+}
+
+#bild{
+    margin-top: 40px;
+}
+#infos{
+    margin-top: 300px;
+}
+.infotext{
+    margin-top: 50px;
+}
+#boxmodell{
+    width:100px;
+    height:100px;
+    padding:10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#boxmodell li{
+    font-size: 18px;
+}
+p{
+    font-size: 18px;
+}
+.media{
+    margin-top: 40px;
+}
+b{
+    color:darkolivegreen;
+}
+#studium{
+    margin-top: 170px;
+}
+#formular p{
+    font-size: 9px;
+}
+
+.formularEingabe{
+background-color: lightgray;
+ width: 200px;
+ height:20px;   
+ border: none;
+}
+::placeholder{
+    color:white;
+}
+
+#nachricht{
+    margin-left: 105px;
+    background-color: lightgray;
+    border:none;
+    font-family: sans-serif;
+}
+.Absenden{
+    color:white;
+    background-color: lightgray;
+    width:80px;
+    height:25px;
+    border:none;
+    margin-left: -120px;
+}
+#formular{
+    margin-left: -50px;
+  margin-top: 50px;
+  line-height:8px;
+}
+#formular p{
+    color:gray;
+    margin-left: 40px;
+}
