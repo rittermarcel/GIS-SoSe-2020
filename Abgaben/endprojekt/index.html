@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,65 +7,89 @@
     <link rel="stylesheet" href="style.css">
     <script src="mainscript.js" defer></script>
     <script src="inhalt.js" defer></script>
+
+
 </head>
 <body>
-    <div id="wrapper">
     <header>
-        <img src="Bilder/logo.png" alt="logo" id="logo">
-    <div class="navigation">
-        <div class="einkaufswagen">
-<a href="meinebestellungen.html"><img src="Bilder/einkaufswagen.png" alt="einkaufswagen"></a>
-<p id="counter">0</p>
+<div class="task-leiste">
+<div class="logo">
+    <img src="Bilder/logo.png">
 </div>
-<p id="eingeganeBestellungen"><a href="eingegangenebestellungen.html"><b>EINGEGANGE BESTELLUNGEN</b></a></p>
+<div class="eingegangene-bestellungen">
+    <b><a href="eingegangenebestellungen.html">EINGEGANGENE BESTELLUNGEN</b></a>
+</div>
+<div class="warenkorb">
+    <a href="meinebestellungen.html"><img src="Bilder/einkaufswagen.png"></a>
+    <p id="counter">0</p>
+</div>
 
 </div>
-
     </header>
-    <main id="main">
-        <h1 id="titel"></h1>
-    <p id="maximaleAnzahl"></p>
-<div id="wallpaper"></div>
-<button type="button" id="startlink">Erstelle dein eigenes Eis</button>
+
+    <main>
+<div class="wallpaper">
+    <img src="Bilder/wallpaper.jpg" >
+    <div class="wallpaper-button">
+    <button id="eis-erstellen-link">Eigenes Eis erstellen</button>
+</div>
+</div>
+
+<div class="wrapper">
+<h1 id="titel"></h1>
 <p id="beschreibung"> </p>
-<div class="bilder">
-    <div class="hausgemacht">
-<img src="Bilder/hausgemacht.png" alt="hausgemachtbild" id="hausgemacht">
-<h3>Hausgemacht</h3>
-<p id="hausgemachtBeschreibung"></p>
-</div>
-<div class="hausgemacht">
-<img src="Bilder/taeglichfrisch.png" alt="täglichfrischbild" id="täglichfrisch">
-<h3>Täglich frisch</h3>
-<p id="taeglichFrischBeschreibung"></p>
-</div>
-<div class="hausgemacht">
-<img src="Bilder/umweltschonend.png" alt="umweltschonendbild" id="umweltschonend">
-<h3>Umweltschonend</h3>
-<p id="umweltschonendBeschreibung"></p>
-</div>
-</div>
-<div class="titelEisErstellen">
-<h1 id="eisErstellenTitel">Eis erstellen</h1>
-<p id="eisErstellenBeschreibung">Erstelle dein Individuelles Eis</p>
 
+<div class="eigenschaften">
+    <div class="eigenschaften-item">
+        <img src="Bilder/hausgemacht.png" alt="hausgemachtbild" id="hausgemacht">
+        <h3 class="eigenschaft-titel">Hausgemacht</h3>
+        <p id="hausgemachtBeschreibung"></p>
+    </div>
+
+        <div class="eigenschaften-item">
+        <img src="Bilder/taeglichfrisch.png" alt="täglichfrischbild" id="täglichfrisch">
+        <h3 class="eigenschaft-titel">Frisch</h3>
+        <p id="taeglichFrischBeschreibung"></p>
+
+        </div>
+ 
+        <div class="eigenschaften-item">
+            <img src="Bilder/umweltschonend.png" alt="umweltschonendbild" id="umweltschonend">
+            <h3 class="eigenschaft-titel">Umweltschonend</h3>
+            <p id="umweltschonendBeschreibung"></p>
+    
+            </div>
+ 
+</div>
+<h1 id="eis-erstellen-titel">Eis erstellen</h1>
+<p id="eis-erstellen-beschreibung">Erstelle dein Individuelles Eis</p>
+
+<div class="bild-generator-flex">
+<div id="eis-bild"></div>
+<div id="eis-generator">
+    <p id="maximale-kugelanzahl-message"></p>
 </div>
 
-<div class="bestellung">
+
+
+<div id="rechnung">
+<div class="details">
 <p id="waffelSorteBestellt"><b>Waffelsorte: </b></p>
 <p id="eisSorteBestellt"><b>Eissorte: </b></p><br>
 <p id="streußelSorteBestellt"><b>Streußelsorte:</b></p>
+<br><br>
 <p id="preis"><b>Preis: </b>0€</p>
-
 </div>
-<div id="eisBild"></div>
+</div>
+</div>
+</div>
 
-<p id="info"></p>
     </main>
+
 
     <footer>
 
+
     </footer>
-</div>
 </body>
 </html>

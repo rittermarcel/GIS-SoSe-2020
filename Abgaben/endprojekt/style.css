@@ -1,396 +1,376 @@
-html{
-    background-image: url(Bilder/background.png);
+html {
     font-family: 'Courier New', Courier, monospace;
-    
-    
 }
-#wrapper{
-    width:100%;
-max-width: 60%;
-margin: 0 auto;
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("Bilder/background.png");
+    font-size: 18px;
+    z-index: 1;
+    width: 100%;
+    left:0px;
+}
 
+
+.task-leiste {
+    position: relative;
+    color: white;
+    background-color: white;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 4.5em;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    margin-left: 2%;
+}
+.logo img{
+    width: 40px;
+    height: 55px;
+}
+.eingegangene-bestellungen {
+    color: black;
+}
+.warenkorb {
+    position: relative;
+    display: inline-block; 
+
+    margin-right: 2%;
+
+}
+.warenkorb img {
+    height:40px;
+    width: 40px;
 }
 #counter{
-    float:right;
-    position: relative;
-    top:38px;
-    left:43px;
+    position: absolute;
+    top: 15px; 
+    right: -10px;
+    background-color: red; 
+    color: white; 
+    padding: 3px 6px;
+    border-radius: 50%; 
+    font-weight: bold; 
+    font-size: 14px; 
+    line-height: 1; 
+    min-width: 20px; 
+    text-align: center; 
 }
-#logo{
-    width:40px;
+.wallpaper{
     position: relative;
-    height:60px;
-    top:20px;
-    float: left;
-    margin-left: 100px;
-    
-}
-.navigation img[alt=einkaufswagen]{
-    width:30px;
-    height:30px;
-    float: right;
-    margin-right: 100px;
-    position: relative;
-    top:30px;
-
-}
-.navigation img[alt=home]{
-    width:55px;
-    height:35px;
-    float: right;
-    margin-right: 100px;
-    position: relative;
-    top:30px;
-}
-#meineBestellungen{
-    font-family: sans-serif;
-    position: relative;
-    top:30px;
-    font-size: 13px;
-    float: right;
-    margin-right: 100px;
-}
-
-
-#eingeganeBestellungen{
-    font-family: sans-serif;
-    position: relative;
-    top:30px;
-    font-size: 13px;
-    float: right;
-    margin-right: 30px; 
-}
-
-header{
-    height:100px;
-    background-color:white;
     width: 100%;
-    position:fixed;
-    left:0px;
-    top:0px;
-    z-index: 2;
 }
-#wallpaper{
-    background-image: url(Bilder/wallpaper.jpg);
-    position:absolute;
-    top:100px;
-    width:100%;
-    left:0px;
-    height:950px;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
+.wallpaper img {
+    width: 100%; /* Das Bild nimmt die volle Breite des übergeordneten Elements ein. */
+    height: auto; 
+    display: block
 }
-#startlink{
-    position: relative;
-    width:300px;
-    height:50px;
-    top:800px;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-    border: 2px solid black;
-    background-color: transparent;
+.wallpaper button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 400px;
+    height: 100px;
+    border: 3px solid white; /* etwas breiterer Rand für bessere Sichtbarkeit */
+    background-color: rgba(0, 0, 0, 0.5); /* leicht transparenter schwarzer Hintergrund */
     color: white;
     padding: 5px 25px;
     font-size: 20px;
     cursor: pointer;
-    border-color: white;
-    
+    border-radius: 5px; /* Ecken abrunden */
+    transition: transform 0.3s, background-color 0.3s; /* Übergänge hinzufügen */
+    font-family: 'Arial', sans-serif; /* Einheitliche Schriftfamilie, je nach Bedarf anpassen */
+    text-transform: uppercase; /* Text in Großbuchstaben umwandeln */
+    letter-spacing: 1px; /* Buchstabenabstand leicht erhöhen */
 }
-#startlink a{
-    color: white;
+
+/* Hover-Effekt für den Button */
+.wallpaper button:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Vergrößert den Button leicht beim Überfahren */
+    background-color: rgba(0, 0, 0, 0.6); /* erhöht die Opazität leicht */
 }
-#startlink:hover{
-    background-color: darkred;
-    
+
+
+h1{
+    color: black;
+    z-index: 3;
+}
+.wrapper{
+    margin-top: 6%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #titel{
-    color:black;
-    position: relative;
-    top:1200px;
-    font-size: 40px;
-  text-align: center;
+    margin-bottom: 3%;
+    text-align: center;
 }
-#titel2{
-    color:black;
-    position: relative;
-    top:200px;
-    font-size: 40px;
-  text-align: center;
+#beschreibung {
+    text-align: center;
 }
-.titelEisErstellen{
-    position: relative;
-    top:1400px;
-    left:30%;  
-}
-#maximaleAnzahl {
-    position: relative;
-    top:-850px;
-    left:150px;
-}
-
-
-
-#beschreibung{
-    position: relative;
-    top:1150px;
-    font-size:17px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bilder{
-    display:flex;
-    flex-wrap: wrap;
+.eigenschaften {
+    margin-top: 8em;;
+    display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.eigenschaften-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+   
+}
+.eigenschaften-item img{
+    width: 50px;
+    height: 50px;
 }
 
-
-.bilder img{
-    margin-right: 80px;
-    margin-left:80px;
-    margin-top: 100px;
-    position: relative;
-    top:1250px;
-    width:140px;
-    height:140px;
+#hausgemachtBeschreibung {
+    margin-top: -2%;
+    text-align: center;
 }
-.inhalt{
-    margin-top: 200px;
+#taeglichFrischBeschreibung {
+    margin-top: -2%;
+    text-align: center;
 }
-
-
-
-.hausgemacht h3{
-    position: relative;
-    top:1270px;
-    margin-left: 80px;
-    margin-right: 80px;
+#umweltschonendBeschreibung{
+    margin-top: -2%;
+    text-align: center;
 }
-.hausgemacht > p{
-    font-size: 14px;
-    max-width:200px;
-    position: relative;
-    top:1280px;
-    margin-left: 80px;
-    margin-right: 80px;
+#eis-erstellen-titel{
+    margin-top: 4em;
+    text-align: center;
 }
-.eisGenerieren{
-    position: relative;
-    top:1400px;
-    margin-left: 250px;
-    float: right;
-    
-    
+#eis-erstellen-beschreibung {
+    text-align: center;
+    margin-bottom: 3em;
+}
+#notizblock {
+    max-width: 700px;
+    max-height: 600px;
+
 }
 a{
-    text-decoration: none;
     color: black;
+    text-decoration: none
 }
+#eis-bild{
+    width: 35%;
+}
+#eis-bild img{
+    width: 50px;
+    height:50px;
+    border-radius: 8px;  /* Sanft abgerundete Ecken. */
 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Ein leichter Schatten für ein wenig Tiefe. */
 
-
-#notizblock{
+}
+.artikel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.artikel-button{
     position: relative;
-    float:left;
-    top:1250px;
-    
-  margin-left:200px;
-  margin-right: 200px;
-    width:600px;
-    height:500px;
-    
-    
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;  /* Ein nettes Grün. */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-#kugel{
-    width:100px;
+.artikel-button:hover {
+    background-color: #45A049;
+}
+.artikel-button:active {
+    transform: scale(0.95);
+}
+.artikel-button-auswahl{
+    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
-    margin-top: -45px;
-    left:-190px;
-    top:-170px;
-    z-index: 2;
-   
-   
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;  /* Ein nettes Grün. */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
-#eisBild{
-    position: fixed;
-    display:flex;
-    top:950px;
-    left:400px;
-    float:left;
-    flex-direction: column-reverse;
+.artikel-button-auswahl:hover {
+    background-color: #45A049;
+}
+.artikel-button-auswahl:active {
+    transform: scale(0.95);
+}
+.artikel-button-auswahl-loeschen{
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.5rem 1rem;
+    background-color: #d9534f;  /* Ein nettes Grün. */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.artikel-button-auswahl:hover {
+    background-color: #45A049;
+}
+.artikel-button-auswahl:active {
+    transform: scale(0.95);
 }
 
-#waffel{
-    position: relative;
-   margin-top: -700px;
-    width:150px;
-    height:200px;
-    top:-60px;
-    left:-215px;
-}
 
-#streußel{
-    position: relative;
-    margin-top: -100px;
-     width:100px;
-     height:100px;
-     top:-170px;
-     left:-180px;
-     z-index: 3;
-}
-
-#restliches{
-    position: relative;
-    width:180px;
-    height:180px;
-    top:-70px;
-    left:-230px;
-    margin-top: -700px;
-}
-
-
-.bestellung{
-    position: relative;
-    top:1600px;
-    float:left;
-    left:390px;
-    width:280px;
-    z-index: 1;
-    font-size: 15px;
-}
-.inhalt button{
-    width:20px;
-    height:20px;
-}
-#anzeigeBild{
-    
-    width:60px;
-    height:60px;
-    margin-right:10px;
+.artikel-auswahl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
     margin-top: 10px;
 }
+#rechnung{
+    position: relative; 
 
-
-@media (max-width:  600px){ /*Smartphone*/
-    
-    #form{
-        position: relative;
-        top:2600px;
-        float:left;
-        left:250px;
-       
-    }
-
-    .bestellung{
-        position: absolute;
-        top:3000px;
-        left:500px;
-        z-index: 5;
-    }
-
-    #notizblock{
-        position: relative;
-        float:left;
-        top:1250px;
-        
-        margin-left:0px;
-        width:400px;
-        height:300px;    
-    }
-    .bestellung{
-        position: relative;
-        top:1500px;
-        float:left;
-        left:130px;
-        width:180px;
-        z-index: 1;
-        font-size: 10px;
-    }
-    #waffel{
-        position: relative;
-       margin-top: -700px;
-        width:150px;
-        height:200px;
-        top:-600px;
-        left:-370px;
-    }
-    #streußel{
-        position: relative;
-        
-         width:100px;
-         height:100px;
-         top:-690px;
-         left:-350px;
-         z-index: 3;
-    }
-    
-    #restliches{
-        position: relative;
-        width:180px;
-        height:180px;
-        top:-620px;
-        left:-390px;
-        margin-top: -700px;
-    }
-    #kugel{
-        width:100px;
-        position: relative;
-        margin-top: -45px;
-        left:-350px;
-        top:-710px;
-        z-index: 2;
-       
-    }
-    
-    
-    #eingeganeBestellungen{
-        font-family: sans-serif;
-        position: relative;
-        top:20px;
-        font-size: 13px;
-        float: right;
-        margin-right: 30px; 
-    }
 }
-@media (min-width:600px) and (max-width:1700px){
-    #waffel{
-        position: relative;
-       margin-top: -700px;
-        width:150px;
-        height:200px;
-        top:-500px;
-        left:-260px;
-    }
-    #streußel{
-        position: relative;
-        
-         width:100px;
-         height:100px;
-         top:-600px;
-         left:-240px;
-         z-index: 3;
-    }
-    
-    #restliches{
-        position: relative;
-        width:180px;
-        height:180px;
-        top:-520px;
-        left:-280px;
-        margin-top: -700px;
-    }
-    #kugel{
-        width:100px;
-        position: relative;
-        margin-top: -45px;
-        left:-240px;
-        top:-610px;
-        z-index: 2;
-       
-    }
+.details {
+    position: relative;
+    background-size: cover; /* Damit sich das Bild an die Größe des .details-Containers anpasst */
+    padding: 20px 40px; /* Abstand im Inneren des Containers, um Text von den Rändern fernzuhalten */
+    border-radius: 5px; /* Abrundung der Ecken */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ein leichter Schatten, um den Eindruck von Tiefe zu erwecken */
+    font-family: 'Courier New', Courier, monospace; /* Eine schreibmaschinenähnliche Schriftart, um das Notizblockgefühl zu erwecken */
+    max-width: 400px; /* oder was auch immer benötigt wird */
+    margin: 0 auto; /* Zentriert den Block, wenn er in einem größeren Container liegt */
+    line-height: 1.5; /* Stellt sicher, dass der Text nicht zu eng zusammenliegt */
+}
+.details p {
+    margin-bottom: 10px; /* Abstand zwischen den Absätzen */
 }
 
+.details p b {
+    color: #333; /* Dunkelgrau für einen weicheren Kontrast */
+}
 
+/* Preisstil - größer und prominenter */
+#preis {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+#eis-generator {
+    display:flex;
+    flex-direction: column-reverse;
+    z-index: 11;
+  
+}
+#waffel{
+    position: relative;
+    width:200px;
+    height:250px;
+
+}
+
+#kugel{
+    position: relative;
+    width:120px;
+    top: 90px;
+    left:35px; 
+    margin-top: -45px;
+   
+   
+}
+#streußel{
+    position: relative;
+    top: 90px;
+    left:40px; 
+     width:100px;
+     height:100px;
+}
+#restliches{
+    position: relative;
+    top:15px;
+    left:5px;
+    width:180px;
+    height:180px;
+}
+.bild-generator-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width:850px){
+    #notizblock {
+        width: 300px;
+        height: 400px;
+
+    }
+    .details {
+        width: 60%;
+        top: 50px; /* Anpassen, je nachdem, wo Sie es haben möchten */
+        left: 50px; /* Anpassen, je nachdem, wo Sie es haben möchten */
+    }
+    #eis-erstellen-beschreibung {
+        margin-bottom: 2em;
+    }
+    #eis-erstellen-titel{
+        margin-top: 2em;
+    }
+    .eigenschaften {
+        margin-top: 4em;;
+    
+    }
+    .wallpaper button{
+        width:200px;
+        height:80px;
+    }
+    .warenkorb {
+        margin-right: 5%;
+    }
+    .logo{
+        margin-left: 5%;
+    }
+    .eigenschaften-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-right: 2em;
+        margin-left: 2em;
+        margin-bottom: 2em;
+       
+    }
+    .wrapper{
+        width: 70%;
+    }
+    #titel{
+        margin-top: 2em;
+        margin-bottom: 6%;
+    }
+
+}

@@ -1,76 +1,117 @@
-
-button{
-    width:100px;
-    height:20px;
+.wrapper-einkaufswagen{
+        margin-top: 2%;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+ 
+}
+.eingegangene-bestellungen {
+    margin-right: 2%;
+}
+.main-bestellungen-preis{
+    margin-top: 4em;
+    text-align: center;
 }
 
-#bestellen {
-    width:170px;
-    height:30px;
-}
-#bestellen:hover{
-background-color: darkred;
 
+/* Preisstil - größer und prominenter */
+#preis {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+#main{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+ 
+    
 }
 #bestellungen{
-    width:300px;
-    position: relative;
-    top:0px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 60%;
 }
-.bestellungen {
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 180px;
-    
-    margin-top: 300px;
-    
+#bestellungen p {
+    margin-bottom: 10px; /* Abstand zwischen den Absätzen */
 }
-#formdiv{
-    position: relative;
-    top:0px;
-    margin-left: 43%;
-    margin-top: 50px;
+
+#bestellungen p b {
+    color: #333; /* Dunkelgrau für einen weicheren Kontrast */
+}
+button {
+    display: inline-block;
+    padding: 10px 20px; /* Abstand rund um den Text des Buttons */
+    background-color: #e74c3c; /* Ein sattes Rot für das "Löschen"-Gefühl */
+    border: none; /* Kein Standard-Borderrand */
+    border-radius: 5px; /* Leicht abgerundete Ecken */
+    color: white; /* Weißer Text */
+    font-family: Arial, sans-serif; /* Eine einfache, saubere Schriftart */
+    font-size: 16px; /* Textgröße */
+    cursor: pointer; /* Cursor-Effekt beim Überfahren */
+    transition: background-color 0.3s, transform 0.3s; /* Sanfte Übergangseffekte */
+
+}
+#formdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 50px auto;
+    padding: 40px 20px; /* Erhöhen Sie das vertikale padding */
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
 }
 
 
-
-
-#gesamtPreis{
-    position: relative;
-    top:200px;
-    text-align: center;
-    
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
+
+#form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#form input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#form input[type="button"] {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
 #serverAntwort {
-    font-size: 15;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #d9534f;
 }
 
-@media (max-width:  600px){ 
-    #bestellungen{
-        float:left;
-        margin-left: 200px;
-        right:300px;
-        width:500px;
-        position: relative;
-        top:50px;
-      
-    }
-    
-    
-   
-    
-   #formdiv form{
-       position: relative;
-       margin-top: 80px;
-        top:0px;
-        float:left;
-        left:-80px;
-  
-    
-   }
-  
 
-}
+
+
+
+
