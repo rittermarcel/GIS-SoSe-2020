@@ -109,6 +109,23 @@ button {
     font-size: 16px;
     color: #d9534f;
 }
+@media (max-width:850px){
+    #formdiv {
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px;
+    }
+
+    #form input[type="text"],
+    #form input[type="button"] {
+        padding: 5px 10px;
+        font-size: 14px;
+        box-sizing: border-box; /* Stellen Sie sicher, dass das Padding die Gesamtbreite nicht erhöht */
+        width: 100%;
+    }
+
+
+}
 
 
 
