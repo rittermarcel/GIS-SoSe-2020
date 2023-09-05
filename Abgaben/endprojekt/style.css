@@ -29,6 +29,7 @@ body {
     justify-content: space-between;
 
 }
+
 .logo{
     margin-left: 2%;
 }
@@ -175,17 +176,19 @@ a{
 }
 #eis-bild img{
     width: 50px;
-    height:50px;
-    border-radius: 8px;  /* Sanft abgerundete Ecken. */
-
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Ein leichter Schatten für ein wenig Tiefe. */
-
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Damit das Bild korrekt skaliert und zugeschnitten wird, wenn es nicht im 1:1-Verhältnis vorliegt. */
 }
+
+
 .artikel{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    height: 70px; 
 }
 .artikel-button{
     position: relative;
@@ -259,13 +262,11 @@ a{
 }
 .details {
     position: relative;
-    background-size: cover; /* Damit sich das Bild an die Größe des .details-Containers anpasst */
     padding: 20px 40px; /* Abstand im Inneren des Containers, um Text von den Rändern fernzuhalten */
     border-radius: 5px; /* Abrundung der Ecken */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ein leichter Schatten, um den Eindruck von Tiefe zu erwecken */
     font-family: 'Courier New', Courier, monospace; /* Eine schreibmaschinenähnliche Schriftart, um das Notizblockgefühl zu erwecken */
     max-width: 400px; /* oder was auch immer benötigt wird */
-    margin: 0 auto; /* Zentriert den Block, wenn er in einem größeren Container liegt */
     line-height: 1.5; /* Stellt sicher, dass der Text nicht zu eng zusammenliegt */
 }
 .details p {
@@ -322,18 +323,13 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 @media (max-width:850px){
-    #notizblock {
-        width: 300px;
-        height: 400px;
 
-    }
     .details {
         width: 60%;
-        top: 50px; /* Anpassen, je nachdem, wo Sie es haben möchten */
-        left: 50px; /* Anpassen, je nachdem, wo Sie es haben möchten */
+        margin-top: 50px; /* Anpassen, je nachdem, wo Sie es haben möchten */
     }
     #eis-erstellen-beschreibung {
         margin-bottom: 2em;
@@ -366,11 +362,17 @@ a{
        
     }
     .wrapper{
-        width: 70%;
+        width: 80%;
     }
     #titel{
         margin-top: 2em;
         margin-bottom: 6%;
+    }
+    .task-leiste b{
+        font-size: 14px;
+    }
+    #eis-bild{
+        width: 100%;
     }
 
 }
