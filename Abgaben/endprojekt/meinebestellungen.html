@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Bestellungen</title>
+    <title>Meine Warenkorb</title>
     <script src="scriptmeinebestellungen.js" defer></script>
     <link rel="stylesheet" href="einkaufswagenstyle.css">
     <link rel="stylesheet" href="style.css">
@@ -11,21 +11,26 @@
 <body>
    
         <header>
-            <a href="index.html"><img src ="Bilder/logo.png" alt="logo" id="logo"></a>
-    <div class="navigation">
-        
-    <a href="index.html"><img src="Bilder/home.png" id="meineBestellungen" alt="home"></a>
-    <p id="eingeganeBestellungen"><a href="eingegangenebestellungen.html"><b>EINGEGANGE BESTELLUNGEN</b></a></p>
-    
-    </div>
+            <div class="task-leiste">
+                <div class="logo">
+                    <a href="index.html"><img src="Bilder/logo.png"></a>
+                </div>
+                <div class="eingegangene-bestellungen">
+                    <b><a href="eingegangenebestellungen.html">EINGEGANGENE BESTELLUNGEN</b></a>
+                </div>
+                
+                </div>
     
         </header>
         <main>
-
-        <div id="main">
+            <div class="wrapper-einkaufswagen">
+           <div class="main-bestellungen-preis">
             <h1 id="titel2">Meine Bestellungen</h1>
             
             <p id="gesamtPreis">Gesamtpreis:</p>
+           </div>
+        <div id="main">
+            
 
         </div>
 
@@ -42,6 +47,7 @@
                     </form>
                     <p id="serverAntwort"></p>
                 </div>
+            </div>
             </main>
             <footer>
                 
